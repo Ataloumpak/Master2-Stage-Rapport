@@ -2,17 +2,39 @@
 \BOOKMARK [0][-]{acknowledgment.2.0}{Remerciements}{}% 2
 \BOOKMARK [0][-]{.0}{Table des mati\350res}{}% 3
 \BOOKMARK [0][-]{division.4}{Introduction}{}% 4
-\BOOKMARK [0][-]{division.5}{Prise en main de LaTeX}{}% 5
-\BOOKMARK [1][-]{section.5.1}{Installation}{division.5}% 6
-\BOOKMARK [2][-]{subsection.5.1.1}{Sous Linux}{section.5.1}% 7
-\BOOKMARK [2][-]{subsection.5.1.2}{Sous Windows}{section.5.1}% 8
-\BOOKMARK [1][-]{section.5.2}{Compilation des documents}{division.5}% 9
-\BOOKMARK [1][-]{section.5.3}{Quelques commandes}{division.5}% 10
-\BOOKMARK [2][-]{subsection.5.3.1}{Insertion de figures}{section.5.3}% 11
-\BOOKMARK [2][-]{subsection.5.3.2}{Insertion d'\357\277\275quations}{section.5.3}% 12
-\BOOKMARK [2][-]{subsection.5.3.3}{Insertion de code}{section.5.3}% 13
-\BOOKMARK [2][-]{subsection.5.3.4}{R\357\277\275f\357\277\275rences et citations}{section.5.3}% 14
-\BOOKMARK [1][-]{section.5.4}{Doc LaTeX}{division.5}% 15
-\BOOKMARK [0][-]{division.6}{Conclusion}{}% 16
-\BOOKMARK [0][-]{division.7}{Bibliographie}{}% 17
-\BOOKMARK [0][-]{division.8}{Annexe 1}{}% 18
+\BOOKMARK [1][-]{section.4.1}{Introduction g\351n\351rale}{division.4}% 5
+\BOOKMARK [2][-]{subsection.4.1.1}{Introduction}{section.4.1}% 6
+\BOOKMARK [2][-]{subsection.4.1.2}{Probl\351matique}{section.4.1}% 7
+\BOOKMARK [2][-]{subsection.4.1.3}{Choix du sujet}{section.4.1}% 8
+\BOOKMARK [2][-]{subsection.4.1.4}{Interet}{section.4.1}% 9
+\BOOKMARK [1][-]{section.4.2}{Pr\351sentation de l?entreprise}{division.4}% 10
+\BOOKMARK [2][-]{subsection.4.2.1}{Inria}{section.4.2}% 11
+\BOOKMARK [2][-]{subsection.4.2.2}{place et role de l?inria}{section.4.2}% 12
+\BOOKMARK [2][-]{subsection.4.2.3}{Son organisation}{section.4.2}% 13
+\BOOKMARK [2][-]{subsection.4.2.4}{Defrost}{section.4.2}% 14
+\BOOKMARK [1][-]{section.4.3}{Projets}{division.4}% 15
+\BOOKMARK [2][-]{subsection.4.3.1}{An\351vrisme}{section.4.3}% 16
+\BOOKMARK [2][-]{subsection.4.3.2}{Autre projet en cours}{section.4.3}% 17
+\BOOKMARK [0][-]{division.5}{Sofa}{}% 18
+\BOOKMARK [1][-]{section.5.1}{Objectif de Sofa}{division.5}% 19
+\BOOKMARK [1][-]{section.5.2}{M\351canismes simples}{division.5}% 20
+\BOOKMARK [2][-]{subsection.5.2.1}{Les ex\351cutables}{section.5.2}% 21
+\BOOKMARK [1][-]{section.5.3}{M\351canismes complexes}{division.5}% 22
+\BOOKMARK [2][-]{subsection.5.3.1}{Les Datas}{section.5.3}% 23
+\BOOKMARK [2][-]{subsection.5.3.2}{Les MechanicalObjects}{section.5.3}% 24
+\BOOKMARK [0][-]{division.6}{HMD}{}% 25
+\BOOKMARK [1][-]{section.6.1}{La st\351r\351ovision}{division.6}% 26
+\BOOKMARK [2][-]{subsection.6.1.1}{Les casques de r\351alit\351 virtuelle}{section.6.1}% 27
+\BOOKMARK [2][-]{subsection.6.1.2}{L?int\351gration}{section.6.1}% 28
+\BOOKMARK [0][-]{division.7}{Op\351ration du crane}{}% 29
+\BOOKMARK [1][-]{section.7.1}{D\351roulement en bloc op\351ratoire}{division.7}% 30
+\BOOKMARK [1][-]{section.7.2}{Mod\351lisation des outils}{division.7}% 31
+\BOOKMARK [2][-]{subsection.7.2.1}{Le chargement des donn\351es}{section.7.2}% 32
+\BOOKMARK [2][-]{subsection.7.2.2}{Le mod\350le de collision}{section.7.2}% 33
+\BOOKMARK [2][-]{subsection.7.2.3}{Les mappings en Sofa}{section.7.2}% 34
+\BOOKMARK [2][-]{subsection.7.2.4}{Le Phantom omni}{section.7.2}% 35
+\BOOKMARK [1][-]{section.7.3}{Mod\351lisation du crane}{division.7}% 36
+\BOOKMARK [2][-]{subsection.7.3.1}{Les Objectifs}{section.7.3}% 37
+\BOOKMARK [2][-]{subsection.7.3.2}{Une image}{section.7.3}% 38
+\BOOKMARK [2][-]{subsection.7.3.3}{Le marching cube}{section.7.3}% 39
+\BOOKMARK [2][-]{subsection.7.3.4}{La collision}{section.7.3}% 40
