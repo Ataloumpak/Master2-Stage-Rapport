@@ -1,34 +1,39 @@
 \BOOKMARK [0][-]{cover.1.0}{Couverture}{}% 1
-\BOOKMARK [1][-]{section.1.1}{R\351sum\351 du stage}{cover.1.0}% 2
-\BOOKMARK [0][-]{acknowledgment.2.0}{Remerciements}{}% 3
-\BOOKMARK [0][-]{.0}{Table des mati\350res}{}% 4
-\BOOKMARK [0][-]{division.4}{Introduction}{}% 5
-\BOOKMARK [0][-]{division.5}{Table des abr\351viations et des sigles}{}% 6
-\BOOKMARK [0][-]{division.6}{Table des figures}{}% 7
-\BOOKMARK [0][-]{division.7}{Description de l'an\351vrisme}{}% 8
-\BOOKMARK [1][-]{section.7.1}{Soin par cath\351ter}{division.7}% 9
-\BOOKMARK [1][-]{section.7.2}{Soin par chirurgie}{division.7}% 10
-\BOOKMARK [2][-]{subsection.7.2.1}{La pr\351paration}{section.7.2}% 11
-\BOOKMARK [2][-]{subsection.7.2.2}{L'op\351ration}{section.7.2}% 12
-\BOOKMARK [1][-]{section.7.3}{L'op\351ration de l'an\351vrisme}{division.7}% 13
-\BOOKMARK [1][-]{section.7.4}{Le congres de neurochirurgie}{division.7}% 14
-\BOOKMARK [0][-]{division.8}{Cr\351ation de la simulation}{}% 15
-\BOOKMARK [1][-]{section.8.5}{Sofa}{division.8}% 16
-\BOOKMARK [0][-]{division.9}{Mod\351lisation}{}% 17
-\BOOKMARK [1][-]{section.9.6}{Mod\351lisation de l'outil}{division.9}% 18
-\BOOKMARK [2][-]{subsection.9.6.1}{Mod\351lisation g\351om\351trique}{section.9.6}% 19
-\BOOKMARK [2][-]{subsection.9.6.2}{Mod\351lisation collisionnelle}{section.9.6}% 20
-\BOOKMARK [1][-]{section.9.7}{Les images}{division.9}% 21
-\BOOKMARK [1][-]{section.9.8}{Le marching cube}{division.9}% 22
-\BOOKMARK [1][-]{section.9.9}{Les Octree}{division.9}% 23
-\BOOKMARK [1][-]{section.9.10}{Le mod\350le de collision}{division.9}% 24
-\BOOKMARK [0][-]{division.10}{La perc\351e du cr\342ne}{}% 25
-\BOOKMARK [0][-]{division.11}{Haptique}{}% 26
-\BOOKMARK [1][-]{section.11.11}{Presentation}{division.11}% 27
-\BOOKMARK [1][-]{section.11.12}{Impl\351mentation}{division.11}% 28
-\BOOKMARK [0][-]{division.12}{Les casques de r\351alit\351 virtuelle}{}% 29
-\BOOKMARK [1][-]{section.12.13}{La st\351r\351ovision}{division.12}% 30
-\BOOKMARK [1][-]{section.12.14}{Les casques de r\351alit\351 virtuelle}{division.12}% 31
-\BOOKMARK [1][-]{section.12.15}{L'int\351gration}{division.12}% 32
-\BOOKMARK [0][-]{division.13}{Bilan}{}% 33
-\BOOKMARK [0][-]{division.14}{Conclusion}{}% 34
+\BOOKMARK [0][-]{division.2}{R\351sum\351}{}% 2
+\BOOKMARK [1][-]{section.2.1}{R\351sum\351 du stage}{division.2}% 3
+\BOOKMARK [1][-]{section.2.2}{Summary}{division.2}% 4
+\BOOKMARK [0][-]{acknowledgment.3.0}{Remerciements}{}% 5
+\BOOKMARK [0][-]{.0}{Table des mati\350res}{}% 6
+\BOOKMARK [0][-]{division.5}{Introduction}{}% 7
+\BOOKMARK [0][-]{division.6}{Table des abr\351viations et des sigles}{}% 8
+\BOOKMARK [0][-]{division.7}{Table des figures}{}% 9
+\BOOKMARK [0][-]{division.8}{Description de l'an\351vrisme}{}% 10
+\BOOKMARK [1][-]{section.8.1}{Soin par cath\351ter}{division.8}% 11
+\BOOKMARK [1][-]{section.8.2}{Soin par chirurgie}{division.8}% 12
+\BOOKMARK [2][-]{subsection.8.2.1}{La pr\351paration}{section.8.2}% 13
+\BOOKMARK [2][-]{subsection.8.2.2}{L'op\351ration}{section.8.2}% 14
+\BOOKMARK [1][-]{section.8.3}{L'op\351ration de l'an\351vrisme}{division.8}% 15
+\BOOKMARK [1][-]{section.8.4}{Le congres de neurochirurgie}{division.8}% 16
+\BOOKMARK [0][-]{division.9}{Cr\351ation de la simulation}{}% 17
+\BOOKMARK [1][-]{section.9.1}{SOFA}{division.9}% 18
+\BOOKMARK [0][-]{division.10}{Mod\351lisation}{}% 19
+\BOOKMARK [1][-]{section.10.1}{Mod\351lisation de l'outil}{division.10}% 20
+\BOOKMARK [2][-]{subsection.10.1.1}{Mod\351lisation g\351om\351trique}{section.10.1}% 21
+\BOOKMARK [2][-]{subsection.10.1.2}{Mod\351lisation collisionnelle}{section.10.1}% 22
+\BOOKMARK [1][-]{section.10.2}{Les images}{division.10}% 23
+\BOOKMARK [1][-]{section.10.3}{Le marching cube}{division.10}% 24
+\BOOKMARK [1][-]{section.10.4}{Les Octree}{division.10}% 25
+\BOOKMARK [1][-]{section.10.5}{Le mod\350le de collision}{division.10}% 26
+\BOOKMARK [1][-]{section.10.6}{Les mappings en SOFA}{division.10}% 27
+\BOOKMARK [0][-]{division.11}{La perc\351e du cr\342ne}{}% 28
+\BOOKMARK [0][-]{division.12}{Haptique}{}% 29
+\BOOKMARK [1][-]{section.12.1}{Presentation}{division.12}% 30
+\BOOKMARK [1][-]{section.12.2}{Impl\351mentation}{division.12}% 31
+\BOOKMARK [0][-]{division.13}{Les casques de r\351alit\351 virtuelle}{}% 32
+\BOOKMARK [1][-]{section.13.1}{La st\351r\351ovision}{division.13}% 33
+\BOOKMARK [1][-]{section.13.2}{Les casques de r\351alit\351 virtuelle}{division.13}% 34
+\BOOKMARK [1][-]{section.13.3}{L'int\351gration}{division.13}% 35
+\BOOKMARK [0][-]{division.14}{Bilan}{}% 36
+\BOOKMARK [0][-]{division.15}{Conclusion}{}% 37
+\BOOKMARK [0][-]{division.16}{Bibliographie}{}% 38
+\BOOKMARK [0][-]{division.17}{Op\351rations de l'an\351vrisme}{}% 39

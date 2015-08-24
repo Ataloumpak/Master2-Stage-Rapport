@@ -1,0 +1,21 @@
+\begin{thebibliography}{1}
+
+\bibitem{familiale}
+Martine Podesto; Marie-Anne Legault; Stephane Batigne;~Mathieu Burgard.
+\newblock {\em Encyclopedie familiale de la sante : comprendre, prevenir,
+  soigner}.
+\newblock Québec Amérique, Montreal, 2010.
+
+\bibitem{GPUGems}
+GPUGems 2 Chapitre 37,
+  \verb#http://http.developer.nvidia.com/GPUGems2/gpugems2_chapter37.html#.
+
+\bibitem{HapticInteraction}
+Krasimir~Kolarov Diego C.~Ruspini and Oussama Khatib.
+\newblock Haptic interaction in virtual environments.
+
+\bibitem{GodObject}
+C.~B. Zilles J.~K. Salisbury.
+\newblock A constraint-based god-object method for haptic display.
+
+\end{thebibliography}
