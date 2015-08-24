@@ -1,5 +1,5 @@
 \documentclass[11pt,oneside,noprintercorrection]{ustl}
-
+\usepackage[T1]{fontenc}
 %----------------------------------------------------------------------
 %                     Chargement de quelques packages
 %----------------------------------------------------------------------
@@ -11,7 +11,7 @@
 % Si l'on produit le PDF avec pdflatex, ceci remplace la plupart
 % des polices EC par des polices CM, plus adaptees a la generation de PDF,
 % car ayant des equivalents PS :
-% obsolète ?? \usepackage{aeguill}
+% obsolÃ¨te ?? \usepackage{aeguill}
 
 
 % Pour les figures PS :
@@ -21,7 +21,6 @@
 % en conjonction avec tlhypref) :
 \usepackage[french]{minitoc}
 %\usepackage[french]{minitoc-hyper}
-
 \usepackage[frenchb]{babel}
 \usepackage{graphicx}
 \usepackage{float}
@@ -194,6 +193,9 @@
 
 
 %-------------------------------------------------------------------
+\section{Resumé du stage}
+
+Ce travail a pour but de présenter une méthode afin de rendre de la stéréovision dans un moteur graphique quelconque destiné à des casques de réalité virtuelle. Le second objectif est de présenter la création d'une simulation d'opération d'un anévrisme cérébral.
 
 
 %-------------------------------------------------------------------
@@ -234,8 +236,10 @@
 
 % ----------------------------------------------------------------
 \SpecialSection{Introduction}
-
-
+Les étudiants français en médecine passent une grande partie de leurs études en stage auprès des établissements hospitaliers français. Plus ils avancent dans leurs études, plus ils ont de temps à consacrer aux exercices en bloc opératoire.
+    Les seuls manières de pratiquer en cours sont la dissection et l'opération sur des cadavres, mais les conditions de conservation et les limitations en nombre de ces corps empêchent de pratiquer certains maux. La grande variété des pathologies étudiés ne peut donc être découverte en cours, les étudiants sont donc poussés vers les hôpitaux afin d'avoir l'opportunité de rencontrer le plus de ces pathologies possibles. 
+    Afin de contourner ce problème, de nombreuses équipes dans le monde professionnel et scientifique se mettent à travailler sur des simulations, et de nombreux outils sont créés afin d'aider à l'immersion dans les simulations proposées. 
+    Nous allons dans un premier temps présenter l'opération de l'anévrisme. Nous continuerons ensuite détailler à l'aide d'expériences formatrices les besoins et problématiques de la création d'une simulation. Puis nous présenterons le moteur choisi ainsi que quelques unes des fonctionnalités qu'il propose. Nous enchaînerons  avec la réalisation de la simulation. Enfin, nous finirons avec un moyen de remplacer les microscopes dans la simulation.
 
 % Pour ne pas avoir le mot `Chapitre' au debut de chaque chapitre.
 \NoChapterHead
@@ -243,185 +247,274 @@
 %--------------------------------------------------------------------------------------
 %--------------------------------------------------------------------------------------
 
-
-\section{Introduction générale}
-
-\subsection{Introduction}
-\subsection{Problématique}
-\subsection{Choix du sujet}
-\subsection{Interet}
-\section{Présentation de l?entreprise}
-\subsection{Inria}
-\subsection{place et role de l?inria}
-
-
-L?INRIA est un institut de recherche national sur les domaines de l?informatique et de l?automatique. Il est réparti sur 9 centres dans toute la France. Il est dirigé par Antoine PETIT, mais chaque centre possède un sous-directeur qui gère la politique de son centre.
-
-
-Les chercheurs employés dans ce centre sont divisés en équipes qui ont chacun un thème qui leur est propre.
-Ces équipes ont une durée de vie de 4 ans, renouvelable 2 fois durant le cours de sa vie, pour un total de 12 ans.
-
-\subsection{Son organisation}
-En plus des chercheurs implémentant de nouveaux algorithmes, INRIA dispose d?une division, appelé SED. Elle est composé de développeurs expérimentés qui ont pour tache de maintenir les différentes plate-formes expérimentales développés par les equipes inria et assurer un suivi technologique.
-
-\subsection{Defrost}
-J?ai la chance de faire cette année mon stage de seconde année de master dans l?une de ces équipes, DEFROsT, spécialisé dans les robots déformables. Cette équipe a été crée suite a la séparation en deux d?une précédente équipe, SHACRA. En effet, cette dernière a été démantelé suite au terme de sa vie, et une partie des chercheurs qui la composaient ont été réassignés au centre de Strasbourg, tandis qu?une autre partie a créé une startup.
-
-\subsubsection{Shacra}
-L?équipe était spécialisé dans l?informatique au service de la médecine. Elle souhaitait utiliser des méthodes mathématiques et informatiques afin de simuler des déformations d?organes d'êtres vivants. C?est ainsi qu?elle améliora Sofa, un moteur graphique et physique afin d'implémenter les différents algorithmes de déformations de maillages. Afin de l?aider dans ses recherches, l?équipe a collaboré avec certains médecins pour se rapprocher des enjeux et besoins de ces derniers. 
-
-Suite au succès de l?une de leurs expériences, simulant une opération de la cataracte, certains membres ont quittés l?équipe afin de créer leur entreprise, appelé INSIMO. Le reste des membres se sont regroupés au sein d?une nouvelle équipe, DEFROsT, acronyme de DEFormable RObotic SofTware.
-
-\subsubsection{Defrost}
-
-Tandis qu?une partie de l?équipe ont débutés la création d?une entreprise, d?autres membres ont déménagés a Strasbourg, (Insérer une raison quelconque). Le reste de l?équipe resté a Lille s?est regroupé autour d?une nouvelle équipe dirigé par Christian Duriez. Cette équipe, nommé Defrost, a changé de thématique, dorénavant ?Contrôle des robots déformables?.
-L?équipe possède 2 chercheurs dans ses rangs. Ces chercheurs sont responsables de l?équipe, et l?un de ces chercheurs est chef de DEFROST. 
-Elle dispose également d?un ingénieur développeur chargé de la maintenance et du support informatique des solutions développés. Cela inclut l?amélioration du logiciel existant tel que de nouvelles options de compilation, de créations d?outils informatiques ou même de gestion du travail partagé. 
-Le reste des collaborateurs sont des doctorants en recherche  avec des financements tiers et des ingénieurs en informatique et en mathématique.
-
-Actuellement, la recherche possède deux axes principaux dans le domaine. Le premier est la construction de robots déformables grâce a divers techniques tel que la pneumatique, ou encore des matériaux mous. Cependant, ces robots ne sont pas encore totalement contrôlables, car les degrés de liberté d?un robot mou sont théoriquement infinis. C?est pourquoi d?autres chercheurs recherchent des moyens de contrôler ces robots mous. 
-
-L?équipe pars du principe que le robot peut lui même se déformer pour répondre a un objectif, mais pour cela il a besoin de connaître à tout moment l?état dans lequel il se trouve. Il a ainsi besoin de pouvoir calculer les déformations apportés a son squelette a chaque pas de temps, et en temps réel. Il peut ainsi déplacer ses parties déplaçable en fonction des paramètres calculés.
-L?équipe a créé un prototype, ainsi que la simulation associé. Il s?agit d?un robot a quatre ressorts, lié chacun a un moteur par un fil. En fonction du déplacement demandé du bout du robot, les moteurs vont tirer ou relâcher les câbles, et la résistance globale du matériau va placer l?effecteur (Définir effecteur).
-
-\section{Projets}
-\subsection{Anévrisme}
-L?anévrisme est un gonflement de certaines artères du corps, qui vont se gonfler de sang. Cet anévrisme grossi avec le temps, et il arrive qu?il se romp, déclanchant une hémorragie locale. Il est possible de soigner un anévrisme par chirurgie, soit en amenant un cathéter jusqu?à l?anévrisme  et en insérant un câble particulier qui va durcir et ainsi boucher l?anévrisme, soit en accédant par diverses manières chirurgicales a l?anévrisme, et en venant clipper l?anévrisme, c?est a dire insérer une pince très puissante et petite autour du collier de l?anévrisme. 
-    Cependant, cet anévrisme peut se situer a des endroits très difficiles d?accès, tel que le cerveau. Le neurochirurgien doit alors opérer pendant plusieurs heures afin d?ouvrir le crane du patient, inciser les différentes liaisons entre les parties du cerveau, et sectionner l?anévrisme.
-    Ces opérations sont très délicates, et sont généralement apprises par les étudiants en assistant des neurochirurgiens expérimentés lors de l?opération. Seulement, en salle d?opération, la vie du patient est mise en jeu, et la moindre erreur peut couter la vie du dit patient. 
-Ce genre d?opération peut également etre exercé sur des corps sans vie, limitant ainsi les risques au maximum. Malheureusement, les quantités de cadavres sont limités, et leur conservation est délicate et demande des installations particulières. 
-C?est pourquoi l?équipe s?est intérressé a la création de simulations basé sur les pratiques actuelles en neurochirurgie afin de simuler une opération de l?anévrisme. Cette simulation a été séparé en 4 étapes différentes
-La séparation des lobes afin de dégager le passage
-La séparation des liens entre l?anévrisme et les parois autour
-Le clipagge de l?anévrisme
-Le clampage de l?anévrisme, en cas d?hémorragie
-
-
-\subsection{Autre projet en cours}
-            
-
-\chapter{Sofa}
-Créé en (Insérer année) , Sofa est un moteur physique servant de base pour implémenter des algorithmes. Il est maintenu par plusieurs équipes de INRIA, et est utilisé par plusieurs entreprises privées. 
-
-\section{Objectif de Sofa}
-    Sofa a pour objectif de fournir aux différentes équipes un environnement maîtrisé complètement. Elles peuvent implémenter les algorithmes sur lesquels elles travailles, et les ingénieurs du SED maintiennent le code source de SOFA afin de fournir de nouvelles possibilités.
-    Sofa est implémenté en C++, est compilable et compatible sur Windows, Mac et Linux, et le code est libre. Il est sauvegardé sur un dépôt git, et la procédure d?installation est décrite sur le site du logiciel ici. Mais le logiciel est avant tout destiné a la recherche, et le dépôt n?est disponible qu?en lecture seule, et les visiteurs ne peuvent pousser les modifications qu?ils effectuent sur le dépôt principal. Il faut pour cela être inscrit sur le site de la Gforge, un site fourni par INRIA, et récupérer le logiciel grâce à une adresse personnalisé.
+\SpecialSection{table des abréviations et des sigles}
+\SpecialSection{la table des tableaux et figures}
 
 
 
-\section{Mécanismes simples}
-Sofa fonctione par principe de scène. Ces scènes sont des niveaux chargés par sofa afin de créer les composants correspondants.
-    Ces scènes peuvent etre écrites en XML, en python, ou en C++. Elles disposent d?une architecture particulière.
-    Chaque scène possède un noeud principal. Ces noeud servent de conteneurs de composants, et peuvent être eux même contenus dans d?autres noeuds. Ces noeuds sont souvent utilisés dans les scènes afin de rassembler les composants avec des thèmes communs, tel que le modèle de collision d?un objet.
-Les composants sont des concepts ou des fonctionnalités qui ont été ajoutés a sofa. Parmi les composants que possède sofa, on trouve par exemple des chargeurs de maillages, des outils de collisions, des moteurs de déformations ou encore des utilitaires de shaders. Certains sont autonomes, mais d?autres en requiers des spécifiques afin de fonctionner correctement. Chaque composant possède des propriétés communes, tel que son nom, et éventuellement des propriétés particulières. l?une de ces propriétés communes est le tag. Il s?agit d?une case ou l?utilisateur peut insérer un ou plusieurs mots séparés par des espaces. De manière générale, ces tags vont faire office de marqueur pour certains autres composants.
-    Sofa possède de nombreux composants de base, mais il permet également de charger des plugins, qui sont des packs de composants, afin d?augmenter les possibilités de sofa. Ce système de plugin a le gros avantage de permettre la création de composants séparément, et également l?ajout de ces composants par la suite a sofa. C?est également très pratique lors de la compilation, car il est possible de ne sélectionner que certains plugins, réduisant drastiquement le temps nécessaire à cette compilation.
+\SpecialSection{Description de l'anévrisme}
+L'anévrisme est une dilatation anormale de certaines artères du corps, et plus rarement de veines ou du coeur, qui vont se gonfler de sang. Cet anévrisme grossit avec le temps, et il arrive qu'il se rompt, déclenchant une hémorragie locale. Il existe actuellement deux moyens de soigner un anévrisme. Ce travail est tiré du livre : Encyclopédie familiale de la santé.
+\section{Soin par cathéter}
+    Un cathéter est un câble creux de longueur variable  que l'on va amener jusqu'à l'anévrisme par les voies naturelles du corps tel que les vaisseaux sanguins. Celui-ci va ensuite servir de passage jusqu'à la région d'intérêt pour un filament métallique, où il va progressivement être poussé et remplir la poche, formant une pelote. Ce filament est imbibé d'une substance qui va se solidifier, et finir par boucher complètement l'anévrisme. 
+\begin{figure}[!ht]
+  \centering
+  \includegraphics[height=8cm]{Embolisation}
+  \caption{Embolisation d'un anévrysme}
+  \label{fig:ustl}
+\end{figure}
+\section{Soin par chirurgie}
+    L'anévrisme possède un resserrement à sa base. On appelle ce resserrement le collet de l'anévrisme. Cette méthode consiste à poser une pince sur ce collet, afin d'isoler complètement l'anévrisme.
+\begin{figure}[!ht]
+  \centering
+  \includegraphics[height=8cm]{Clampage}
+  \caption{Clampage d'un anévrysme}
+  \label{fig:ustl}
+\end{figure}
+Nous allons donc voir maintenant comment se déroule une opération par chirurgie. Dans notre cas, nous ne nous intéresseront qu'à l'anévrisme cérébral. 
+\subsection{La préparation}
+Avant une opération d'anévrisme cérébral, chaque patient doit passer une IRM(Imagerie par résonance magnétique). 
+L'IRM est une technique d'imagerie médicale permettant d'obtenir des vues en deux puis en trois dimension de l'intérieur du corps. Cette technique est non-invasive et inoffensive pour le patient.
+L'IRM enregistre couche par couche les différentes parties du cerveau et permet de naviguer parmi ces couches. Ces images sont par la suite enregistrées pour pouvoir être utilisées par la suite. 
+Juste avant l'opération, le neurochirurgien va analyser l'IRM. Il va modéliser les différents organes et établir une stratégie d'accès à l'anévrisme. Cette modélisation l'aidera durant toute l'opération.
+\subsection{L'opération}
+    Le soin s'effectue dans un bloc opératoire. Le chirurgien commence par fixer la tête du patient grâce à un serre-tête solidement fixé et verrouillé au siège. Une fois stabilisé, le chirurgien dégage la peau et les muscles du crâne. 
+    Une fois la chair découpée et écartée, les neurochirurgiens doivent ouvrir le crâne afin d'accéder au cerveau. On appelle ce chemin la voie d'abord. Elle est standard et fixe.
+\begin{figure}[!ht]
+  \centering
+  \includegraphics[height=8cm]{Voletpterionalstandard}
+  \caption{Le volet ptérioral standard, zone de la voie d'abord}
+  \label{fig:ustl}
+\end{figure}
+
+Le neurochirurgien va d'abord brûler le crâne grâce à une pince électrique, afin de dessiner 3 cercles et les liens entre ces trois cercles. Il va ensuite découper l'os en suivant les traits, et enlever le morceau d'os restant.
+    A ce moment, le neurochirurgien va placer un microscope à pied au dessus de la voie d'abord. C'est ce microscope qui bougera si le médecin souhaite changer de vue, et ce médecin effectuera le reste de l'opération au travers de ce microscope.
+    Il va tout d'abord sectionner les bris reliant les deux parties du cerveau afin de pouvoir écarter ces deux parties. Il aura ainsi accès à l'anévrisme. Mais ce dernier peut être lui même attaché par des fibres aux organes l'entourant, le chirurgien va donc séparer l'anévrisme du reste des organes. La première raison est que l'anévrisme est gorgé de sang, il est donc gonflé et facilement manipulable. La seconde raison est que le chirurgien sera capable après de manipuler l'anévrisme afin de le placer dans une position favorable. 
+    Une fois l'anévrisme désolidarisé, l'opérateur va venir clipser le collet de l'anévrisme, grâce a une petite pince métallique. Il va ensuite percer l'anévrisme avec une seringue, afin d'absorber le sang contenu dans la poche, puis va sectionner l'anévrisme. Si la pince est mal mise, le patient risque une hémorragie. Afin donc de vérifier l'isolation de l'anévrisme, et de voir une quelconque mauvaise circulation du sang, une substance particulière luminescente va être inséré dans le sang du patient. Et grâce à un mode particulier du microscope, le sang va s'illuminer. Il est ainsi possible d'observer toute mauvaise manipulation sur le cerveau, ou sur les organes autour. 
+    Pour finir, le neurochirurgien va replacer le morceau de crâne découpé, le fixer avec des rivets particuliers, et recoudre la peau du patient.
+
+    Il peut arriver qu'une erreur se produise, et que l'anévrisme se rompt. Le médecin doit alors venir bloquer l'artère avec une pince. On appelle cela le clampage. Une fois l'artère bloqué, le médecin possède un temps limité pour venir clipser l'anévrisme puis enlever la pince de clampage afin d'éviter tout risque définitif pour le patient.
+
+En plus du travail bibliographique précédent, on m'a proposé deux expériences afin d'analyser les besoins des futurs utilisateurs
+\section{L'opération de l'anévrisme}
+    Afin de préparer au mieux mon approche des travaux, on m'a proposé de me rendre a l'hôpital Salengro de Lille pour assister à une opération d'ablation d'un anévrisme cérébral. Plusieurs détails sont à noter.
+    Tout d'abord, les chirurgiens utilisent un serre tète très solidement fixé sur la table d'opération. Il positionne la tète légèrement incliné, afin de placer l'endroit ou le chirurgien va percer l'os sur le haut. Et cette position ne changera pas de toute l'opération.
+    Ensuite, l'opération à demandé 5 personnes. L'équipe était composée de 2 externes chargés de préparer le matériel et  de surveiller l'état du patient, un interne qui assistait le neurochirurgien, tout en observant attentivement, et une assistante expérimentée qui préparait les outils que le neurochirurgien devait utiliser.    
+Une grande partie de l'opération a été réalisé au travers du microscope, et le médecin déplaçait ce microscope à chaque fois qu'il souhaitait avoir un point de vue différent. L'utilisation du microscope a été justifiée par la taille de la voie d'abord extrèmement petite (~25 cm2). Les mouvements du neurochirurgien étaient également très précis et de très faible amplitude.
+Le neurochirurgien est sujet a un stress important durant l'opération. 
+    Enfin, l'opération a duré 7 heures sans pauses.
+
+\section{Le congres de neurochirurgie}
+    Dans le but de me familiariser avec les tâches que l'on m'a confié, mais aussi de comprendre les besoins des neurochirurgiens en terme de simulation, j'ai eu la chance de participer à un congrès appelé ?Société Française de Neurochirurgie?. Basé à la cité internationale des congrès de Nantes, elle a regroupé pendant 3 jours des chercheurs et des entreprises. Des présentations par des chercheurs étaient programmées, et de nombreux stands étaient disposés dans la salle principale afin de présenter les dernières nouveautés en terme d'équipements et de recherches.
+    L'un des outils ressemblait particulièrement à ce qui doit être fait. Il s'agit d'une plate-forme mobile de simulation appelée Neurotouch. Elle est équipée d'un stéréoscope mécanique qui permet de percevoir la 3D grâce à un seul écran. La plate-forme dispose de plusieurs simulations basées sur les Phantom omnis, tel qu'une opération de suppression d'une tumeur par aspiration. Après expérimentation, les outils répondent bien aux mouvements, et les comportements des différents outils sont satisfait par le matériel fourni par la station. 
+    Plusieurs projets sont nés autour des casques de réalité virtuelle. Ils n'étaient présents qu'en tant que démonstrations, mais les applications semblent prometteuses, notamment un projet de vidéo filmée à 360°. Les responsables ont filmé une opération chirurgicale du point de vue du chirurgien. Cela permet une immersion totale dans la scène filmée, et pourra certainement aider les nouveaux étudiants à appréhender le stress de l'opération.
+    Nous avons pour notre part présenté les travaux sur l'opération de l'anévrisme cérébral aux médecins présents lors du congrès. Ils ont tous été surpris par les capacités de déformation des  parties du cerveau et de l'anévrisme. 
+
+\SpecialSection{Création de la simulation}
+Maintenant que nous connaissons les besoins des utilisateurs et le déroulement de l'opération, nous pouvons diviser les principales parties de l'opération à modéliser :
+La découpe du crâne
+La séparation des tissus entre les lobes de cerveau
+La séparation des bris pour libérer l'anévrisme
+Le clippage de l'anévrisme
+Le clampage de l'artère 
+Les parties intracrâniennes des simulations ont déjà été réalisées par un autre membre de l'équipe. Nous allons nous intéresser pour la suite de ce rapport à la réalisation de la partie ?Découpe du crâne?.
+
+\section{Sofa}
+Nous avons choisi SOFA, un framework développé et maintenu par des équipes de l'INRIA. Sofa est implémenté en C++, est compatible Windows, Mac et Linux, et le code est libre. Ce framework possède la particularité de fournir de nombreux outils afin d'aider à la conception de simulations. De plus, les simulations intracrâniennes ont été réalisées avec SOFA, cela permettra donc une continuité des travaux.
+
+
+\SpecialSection{Modélisation}
+Nous allons dans cette partie nous concentrer sur la modélisation des outils de l'opération
+    
+\section{Modélisation de l'outil}
+Le seul outil à modéliser est la pince électrique. 
+\begin{figure}[!ht]
+  \centering
+  \includegraphics[height=6cm]{pince-bistouris-electriques-baionnette-irrigation-68645-107285}
+  \caption{Le volet ptérioral standard, zone de la voie d'abord}
+  \label{fig:ustl}
+\end{figure}
+
+Cette pince peut être remplacée par un outil avec un simple embout, étant donné que les deux mâchoires doivent être quasiment en contact pour délivrer un courant, et que le dessin est simplement désigné par un trait sur le crâne. 
+\subsection{Modélisation géométrique}
+J'ai donc choisi comme représentation un stylo, car il permet de symboliser le point de contact avec sa pointe. L'origine est placé sur celle-ci.
+\begin{figure}[!ht]
+  \centering
+  \includegraphics[height=8cm]{Stylot_short}
+  \caption{Le volet ptérioral standard, zone de la voie d'abord}
+  \label{fig:ustl}
+\end{figure}
+
+\subsection{Modélisation collisionnelle}
+Les modèles de collision ont besoin d'être simplifiés au maximum afin de conserver un temps de calcul minimal. Le maillage du stylo a été remplacé par une première partie en forme de cône, ainsi que le corps par un cylindre
+\begin{figure}[!ht]
+  \centering
+  \includegraphics[height=8cm]{Stylot_collision_short}
+  \caption{Le volet ptérioral standard, zone de la voie d'abord}
+  \label{fig:ustl}
+\end{figure}
+Modélisation du crâne
+    Une fois l'outil créé, il faut modéliser un crâne humain. Plusieurs objectifs sont à réaliser.
+
+\section{Les images}
+    
+    Nous avons utilisé une image d'un crâne générique.
+    Il existe un plugin Image dans SOFA qui permet de traiter des images. Celui-ci contient plusieurs composants capable de charger des images et de les transformer.
+Les scans IRM produisent des données volumiques en bitmap dont le niveau de gris représente la densité. Notre crâne générique possède également ces caractéristiques. Pour être exploitable, on souhaite extraire certaines structures anatomiques pertinentes par segmentation en fonction des niveaux de gris. Les structures ainsi extraites sont alors converties sous forme de maillage surfacique    
+
+\section{Le marching cube}
+
+    Le MarchingCube est une technique publiée en 1987 par William E. Lorensen  et Harvey E. Cline. Elle permet de transformer une image 3D en maillage. L'idée est de séparer l'espace en cubes de tailles identiques, indépendemment de l'image source. Pour chaque sommet, on calcule une moyenne des valeurs de l'image représenté par ce sommet. On définit une valeur, appelé Iso-value. Cette valeur est une valeur seuil qui va nous indiquer si le sommet actuel est dans la figure ou son contraire. Ainsi, les sommets seront segmentés binairement. Pour chaque cube, on récupère les valeurs de chaque sommet.Pour les 8 sommets de chaque cube, on se retrouve avec un octet représentant les différentes possibilités de remplissage, soit 256 valeurs de référence. On construit par la suite un tableau de références. Ce tableau contiendra les différents modèles de remplissage de cube en fonction de son index. Mais il est possible de simplifier les calculs car certains modèles sont simplement des rotations d'autres modèles. Enfin, pour chaque octet calculé on prend la correspondance dans le tableau de référence. On obtient ainsi un maillage complet associé à l'image de départ.
+
+\section{Les Octree}
+    L'octree est une structure de données hiérarchiques régulières. Le premier noeud de l'arbre est un cube. Chaque noeud peut posséder soit 8 fils soit aucun. Les 8 fils forment une subdivision régulière 2*2*2 du noeud père.
+Chaque cube va être subdivisé tant qu'il y a des voxels pleins dans l'espace du cube analysé, sinon on arrête la branche récursive actuelle. 
+    On se retrouve ainsi avec une succession de points qu'il est possible de transformer en maillage 3D grâce a un tableau de référence de la même manière que le marching cubes.
+    L'un des avantages de l'octree réside dans son organisation en arbre. Si on vient a modifier des voxels, seul une partie de l'arbre devra être recalculé. Il permet également de passer efficacement les zones vides. Enfin, le tri et les opérations de recherches sont rapides dû a l'organisation en arbre.
+    Un inconvénient est la gestion des exceptions qui dépend du niveau auquel on remonte dans l'arbre afin d'obtenir les voisins. 
     
 
-\subsection{Les exécutables}
-    Sofa possède deux exécutables principaux. Le premier est le Modeler. Il a pour rôle de donner une interface simple et efficace afin de créer et d?éditer des scènes. Il dispose pour cela de plusieurs menus.
+Le Marching Cube est déjà implémenté dans SOFA, contrairement à l'octree concernant les images 3D.
+\section{Le modèle de collision}
+    Les tests de collision dans les moteurs de jeu ont toujours été très coûteux en temps de calcul. En effet, afin de détecter une collision, on doit tester tous les triangles des deux maillages entre eux. Cela peux atteindre des temps de calculs en (N*N). C'est pourquoi la solution est d'utiliser deux maillages. Le premier maillage servira à afficher l'objet. Celui-ci pourra être détaillé afin de rendre quelque chose de fidèle. Le second sera un maillage très épuré qui reprendra la forme globale du maillage visuel.
+    
+    Blender fournit un composant ?decimate?. Ce composant va permettre d'effacer des points d'un maillage, tout en prenant en compte la forme de celui-ci. Blender nous laisse le choix du pourcentage de triangles restants sur le maillage. 
+\begin{figure}[!ht]
+  \centering
+  \includegraphics[height=8cm]{Crane_100_100_cote_short}
+  \caption{Maillage original du crâne}
+  \label{fig:ustl}
+\end{figure}
 
-Au centre se trouve le détail de la scène actuellement ouverte. Chaque noeud fils est décalé par rapport au noeud parent. Un système d?onglet permet de switcher entre plusieurs scènes ouvertes en meme temps. 
-A gauche se trouve la librairie de composants actuellement disponibles et reconnu par sofa. Ces composants sont triés par catégorie, et il est possible de rechercher par mot les composants dont on connait une partie du nom. Un simple glisser-déposer ajoute le composant au même niveau si on lâche le clic sur un autre composant, soit dans le noeud sélectionné.
-Par un double clic, il est possible d?accéder à une fenêtre d?édition du composant. Cette fenêtre liste l?intégralité des datas publiques du composant, et liste les valeurs déjà existantes.
 
+\begin{figure}[!ht]
+  \centering
+  \includegraphics[height=8cm]{Crane_06_100_cote_short}
+  \caption{Maillage décimé a 94 \%, il reste 6\% du maillage d'origine, et la forme est conservé}
+  \label{fig:ustl}
+\end{figure}
 
-Il est possible d?ajouter des composants dans le gestionnaire de plugins accessible dans le menu ?Edit?. Tous les composants disponibles dans les plugins ajoutés seront immédiatement ajoutés dans la librairie.
-\section{Mécanismes complexes}
-\subsection{Les Datas}
-    Certaines données en sofa sont contenus dans un type particulier, les Datas. Ce sont des encapsuleurs permettant plusieurs choses. Tout d?abord, Le contenu des datas peux etre partagé entre plusieurs datas, y compris des datas de composants differents. Et c?est leur utilisation la plus courante. Cela évite la copie de données parfois très volumineuses.
+La forme globale du crane a été conservé, tandis que les triangles superflus ont été supprimés.
+Les mappings en SOFA
+    Le mapping est le mécanisme qui lie deux maillages entre eux. C'est à dire que toute modification ou force appliquée à l'un des maillages va se transférer à l'autre. Cette liaison dépend du type de mapping utilisé dans les simulations.
+    Nous avons utilisé dans la scène un mapping Rigide. Ce type de mapping considère les maillages comme non déformables. Ainsi, toute force appliquée où que ce soit sur l'un des maillages est équivalent à l'appliquer à son centre. Une fois toutes les forces calculées, l'objet se déplacera.
+    
+\SpecialSection{La percée du crâne}
+L'idée est de traquer la position d'un composant puis de transformer cette position en coordonnées pour modifier l'image. On réappliquera après le MarchingCubes afin de recréer un maillage sans les parties effacés.
+Les deux seuls moyens de rajouter des comportements ou des algorithmes spécifiques à une scène sont l'utilisation de Python, ou l'ajout d'un composant.
+Python dispose d'un système de conversion de type. Ce système permet de transformer des données C++ en données Python, et inversement, tout cela de manière transparente. Cependant, ces conversions n'ont été réalisées que pour les types les plus courants. Or, l'image est gérée et stockée grâce à une librairie spéciale appelé CImg. Les types utilisés dans cette librairie ne sont pas convertibles, il est donc impossible de modifier l'image depuis Python.
+Le seul moyen restant est l'utilisation d'un composant qui modifiera cette image. Ce composant devra être générique, et être inséré dans le plugin Image.
+    Afin de s'intégrer dans la logique du plugin Image, il devra se trouver entre un conteneur d'image et le MarchingCubes. Il s'est donc vu ajouté une image d'entrée et une image de sortie. Afin de conserver un système de données ***, on copie l'image d'entrée dans l'image de sortie à chaque fois que l'image d'entrée change. Cela écrase l'image de sortie précédente. L'image d'entrée est accompagnée d'une série de paramètres appelée Transform. Cette série contient les paramètres spatiaux de l'image étudiée, et est utile afin de changer des coordonnées du repère du monde en coordonnées de l'image. 
+    Une attention toute particulière a été apportée afin de réduire le temps d'exécution du composant.
+    Le système de template du C++ permet une généricité lors de la compilation. Cependant, il est nécessaire de préciser toutes les combinaisons possibles dans le code. Or, on souhaite que notre composant soit le plus générique possible. Nous avons donc abandonné l'idée de traquer un composant particulier. Le tracking de composant a été remplacé par un simple champ de position. Cela rend le composant bien plus polyvalent, en permettant à l'utilisateur de choisir le point à modifier. Ce point peut être modifié en Python durant l'exécution. Le composant dispose également d'une zone de modification dans l'image ainsi que d'un booléen de marche/arrêt. Le booléen permet de simuler le bouton marche/arrêt de l'outil, et le vecteur permettra de prendre en compte la mise a l'échelle de l'image par rapport à celle du MarchingCubes.
+    Enfin, en changeant la valeur des voxels dans l'image, il est possible de modifier le maillage afin de retirer des triangles ou d'en ajouter. 
+    SOFA possède un mécanisme de variable dirty. Ce mécanisme sert à conserver des données tant qu'un composant ne demande pas accès à cette donnée. Actuellement, le composant force la mise à jour des composants qui dépendent de lui grace à ce mécanisme.
 
-\subsection{Les MechanicalObjects}
-Ces composants représentent les états mécaniques des objets modélisés. La totalité des comopsants qui appliquent des forces ou des modifications 
-Les engines 
-Un engine, c?est un composant sofa qui va calculer un lot de données de sortie depuis un lot d?entrée. La stratégie de gestion de ces données est la stratégie paresseuse. C?est a dire que les données d?un engine ne seront (re)calculés qu?a condition qu?un autre composant y fasse appel durant l?execution
-\chapter{HMD}
-    Les opérations menés par les neurochirurgiens sont minimalement invasive, c?est a dire qu?elles doivent au minimum toucher au corps des patients. Afin d?atteindre cet objectif, ils effectuent le moins d?interactions possibles. C?est pourquoi ils se sont équipés d?outils divers, parfois changeant drastiquement les méthodes de travail, tels que les microscopes sur pied. C?est pourquoi on m?a demandé de rendre compatible Sofa et les casques de réalité virtuelle.
+\SpecialSection{Haptique}
+    Lors de l'opération, le chirurgien ressent la physique du patient. Il prend appui sur le crane de celui-ci, il ressent les organes qu'il touche lors de l'opération, et il utilise ces retours afin d'augmenter sa perception de la réalité. 
+    \section{Presentation}
+L'omni est un dispositif d'interaction mécanique à retour d'effort. 
+\begin{figure}[!ht]
+  \centering
+  \includegraphics[height=8cm]{Omni}
+  \caption{Un omni au repos. La pointe du stylo représente le point traqué}
+  \label{fig:ustl}
+\end{figure}
+
+Il possède cinq axes de rotation permettant de le situer dans l'espace, par rapport a l'élément central, mais seulement 3 permettent de fournir un effort, sur leur axe de rotation. Il dispose malgré tout d'un positionnement à six degrés de liberté. 
+\section{Implémentation}
+    Ruspini, Kolarov et Khatib ont montré qu'il etait possible de simuler un système de retour haptique  en simulant un point dans la scène, qui attire l'objet que l'on souhaite controler. Cette méthode s'appèle le god-object. Zilles et Salisbury ont ajoutés qu'il était possible de simuler différents rendus haptiques tel que la friction et la texture d'une surface de manière convaincante par des modulations précises du vecteur force appliqué a l'utilisateur dans le cas d'une modélisation god-object.
+    Ainsi, on va ajouter a la scène un objet qui sera guidé par le phantom. Cet objet servira d'objectif a atteindre a notre outil modélisé. Pour réaliser cela, on ajoute un ressort entre les deux objets. Ce ressort va attirer l'outil a la position du phantom dans la scène. 
+En fonction de l'étirement de ce modèle, SOFA va calculer les forces appliqués a ce modèle, et les transférer au dispositif.
+
+\SpecialSection{Les casques de réalité virtuelle}
+
+    Il existe une règle implicite lors des opérations voulant une affectation minimale des tissus qui ne sont pas en cause dans la pathologie soignée. Afin d'atteindre cet objectif, les chirurgiens effectuent le moins d'interactions possibles. C'est pourquoi ils se sont équipés d'outils divers, parfois changeant les méthodes de travail, tels que les microscopes sur pied. 
+\begin{figure}[!ht]
+  \centering
+  \includegraphics[height=8cm]{microscopie-operatoire-microscope-operatoire-neurochirurgie-chirurgie-epine-dorsale-chirurgie-orl-69446-4789125}
+  \caption{Un microscope opératoire. Il dispose de plusieurs filtres lumineux}
+  \label{fig:ustl}
+\end{figure}
+Ces microscopes permettent aux chirurgiens d'opérer sur des zones très réduites, tel que les opérations intracrâniennes de l'anévrisme. Afin de s'approcher au mieux de l'expérience en bloc opératoire, il est possible d'utiliser des casques de réalité virtuelle dans le but d'émuler cet appareil.
 
 \section{La stéréovision}
-La stéréovision est le prinipe de reconstituer une scène 3D a partir d?images 2D. Il s?agit la d?une technique communément utilisé chez les animaux. Les yeux capturent une image chacun, et l?envoient au cerveau par l?intermédiaire des nerfs optiques. Ces images vont être analysés par plusieurs parties du cerveau, dont l?une va se charger de reconstruire la scène mentalement en 3D. Cela permet d?avoir une notion de profondeur de champ, malgré la capture en 2D.
+La stéréovision est le principe de perception de la 3D, c'est à dire déterminer les dimensions, formes et positions d'objets à partir de prises d'images 2D avec des angles différents. Les animaux utilisent ce principe naturellement et passivement. Les yeux capturent une image chacun, et l'envoient au cerveau par l'intermédiaire des nerfs optiques. Ces images vont être analysées par plusieurs parties du cerveau, dont une va se charger de reconstruire la scène mentalement en 3D. Pour cela, le cerveau va analyser plusieurs critères dans les images:
+Le parallaxe de déplacement représente le déplacement relatif des objets quand l'utilisateur se déplace lui-même. Ainsi, plus un objet est proche, plus il se déplacera rapidement
+La taille connue des objets par l'utilisateur peut l'influencer dans la perception des tailles
+L'occlusion correspond au recouvrement partiel d'un objet par un autre, entraînant une illusion de profondeur.
+La perspective linéaire représente le phénomène de point de fuite, vers lequel vont se diriger les droites de la scène.
+L'éclairage et l'ombrage sont analysés par le cerveau lors de l'analyse des formes et la position des objets dans l'espace.
 
-Ce principe est a l?étude chez l?humain depuis plus d?un siècle, et a été porté sur ordinateur depuis les années 80, naissance de la vision par ordinateur. 
+    Parmi ces éléments, la taille des objets est dépendante de l'utilisateur, ce paramètre ne nous intéresse donc pas. L'occlusion et les perspectives linéaires sont gérés par le système d'affichage classique. Il est donc possible de modifier l'éclairage ainsi que les méthodes de contrôle de la caméra.
 
+    De manière générale, la stéréovision va tenter de tromper le cerveau en utilisant les paramètres donnés plus haut. Et les deux paramètres seront gérés différemment
+
+\section{Les casques de réalité virtuelle}
+    Les CRV possèdent soit deux écrans, soit un écran fusionné. Ces deux parties d'écrans sont visibles la plupart du temps au travers de lentilles qui viennent isoler la vision de chaque oeil, ayant pour effet de n'afficher qu'une moitié d'écran a chaque oeil. Durant le reste du rapport, nous ne parlerons que des casques à écran unique. Il est possible que les techniques soient légèrement différentes pour un casque à deux écrans.
+Depuis quelques années, les casques de réalité virtuelle ont eu un regain de popularité. Ces casques sont maintenant compacts, les trackeurs de position sont très précis, et les écrans intégrés disposent d'une résolution suffisante pour garantir une immersion totale. De plus, le matériel se rapproche très efficacement du microscope opératoire utilisé. 
         
+\section{L'intégration}
+Dans le cas de la stéréovision, nous avons besoin d'au moins deux images. Afin de réaliser cela dans SOFA, il est nécessaire d'utiliser un concept d'OPENGL particulier : Les  framebuffers.
+    Les framebuffers sont des tableaux gérés par OPENGL, et contenant des pixels. Le plus utilisé est le buffer de rendu, très souvent affiché à l'écran. Tout d'abord, on réalise un premier dessin sur une partie de l'écran, puis nous dessinerons une seconde image, sur l'autre moitié. Nous avons fait le choix de n'utiliser qu'une seule caméra afin de conserver les meme propriétés de rendu.
+    Maintenant que nous savons comment dessiner les images, il faut nous intéresser à la manière de positionner les images afin d'avoir la stéréovision la plus réussie.
 
-\subsection{Les casques de réalité virtuelle}
-Depuis quelques années, les casques de réalité virtuels(HMD = Head-mounted devices) ont eu un regain de popularité. La cause est simple : La technologie s?est développé a un point tel que ces casques sont devenus performants, tout en conservant un prix tout public. C?est pourquoi les membres de DEFROST se sont intéressés a l'intégrer dans sofa.
+Selon H.Yamanoue, il existe pour cela 2 méthodes de projection :
+La méthode croisée, ou toed-in
+Les deux caméras sont séparées de quelques centimètres, et les normales des plans de chaque caméra se croisent en un point de l'espace.
+\begin{figure}[!ht]
+  \centering
+  \includegraphics[height=8cm]{microscopie-operatoire-microscope-operatoire-neurochirurgie-chirurgie-epine-dorsale-chirurgie-orl-69446-4789125}
+  \caption{Un microscope opératoire. Il dispose de plusieurs filtres lumineux}
+  \label{fig:ustl}
+\end{figure}
 
-        
-\subsection{L?intégration}
-Dans le cas de la stéréovision, nous avons besoin d?au moins deux images. Malheureusement, certains casques ne possèdent qu?un seul écran. Ce problème est contourné par une simple séparation d?écran. Afin de réaliser cela dans Sofa, il est necessaire d?utiliser un concept d?OPENGL particulier : Les  framebuffers.
-    Les framebuffers sont des tableaux gérés par OPENGL, et contenant des pixels. Le plus utilisé est celui de l?écran, et c?est justement celui la que l?on va utiliser. On va tout d?abord réaliser un premier dessin sur une partie de l?écran, puis nous allons soit sélectionner une seconde caméra, soit utiliser la première afin de réaliser une seconde image, sur l?autre moitié de l?image.
-    Tous les HMD possèdent soit des doubles écrans alignés sur l?horizontale, soit un seul écran bien plus long que haut. De plus, les yeux sont également alignés sur l?horizontale, nous allons donc dessiner les images l?une a gauche de l?autre.
-    Maintenant que nous savons comment dessiner les images, il nous faut nous intéresser a comment positionner les images afin d?avoir la stéréo-vision la plus réussi
+L'approche parallèle
+Les plans des deux caméras sont parallèles l'un à l'autre.
 
-Il existe pour cela 2 types de vision :
-L?approche Toed-in
-Les deux caméras sont séparés de quelques centimètres, et les normales du plan de chaque caméra se croise en un point de l?espace.
- L?approche parallèle
-Les plans des deux caméras sont parallèles l?un a l?autre. 
 
-Un dernier problème se pose alors. Les lentilles des HMD sont courbes, et cela implique que l?image qui sera diffusé a l?utilisateur comportera des aberrations chromatiques. Ces aberrations sont intimement liés a la forme de la lentille. Plus elle sera courbée, plus les composantes seront soit approchés du centre dans le cas de la composante rouge, soit éloigné du centre dans le cas de la composante bleu. La composante verte de l?image n'étant pas affecté significativement, elle sert donc de référence pour les modifications des deux autres composantes.
-    Une solution efficace permet de corriger ce problème. Il s?agit des shaders.
-Les shaders sont des programmes qui sont compilés a l'exécution du programme par les pilotes du chipset graphique, qu?il s?agisse d?une carte graphique intégré a un processeur, ou une carte graphique dédié. L?un des atouts des shaders est que le langage de programmation de ces shaders est standard, c?est a dire qu?il est reconnu par tous les constructeurs de cartes graphiques, ils sont donc universels.
-    Les shaders sont intégrés a Sofa, et il est possible d?utiliser des composants pour les ajouter a la scène. Cela ce réalise en plusieurs étapes
-Tout d?abord, il est nécessaire d?ajouter a une scène un VisualManagerPass. Ce composant va assurer le dessin de tous les objets qui seront taggués avec le même mot que le VMP.
-Il est ensuite nécessaire d?ajouter un VisualManagerSecondaryPass afin de traiter l?image complète. Ce composant va récupérer les images de sortie des VMP ayant les tags identiques à ceux indiqués comme tags d?entrée du composant, et va d?abord les fusionner en une seule image, dans l?ordre des tags. Il va ensuite appliquer le shader indiqué en lui passant comme paramètre l?image créé, en tant que texture. A partir de cette étape, il devient aisé d?appliquer notre modification. En effet, il suffit pour chaque pixel de sélectionner une composante plus ou moins loin, en fonction d?un ratio depuis le centre de l?image. Cette transformation est donné par la formule :
+
+Une limitation technique vient des lentilles courbes des HMD, cela implique que l'image qui sera diffusée à l'utilisateur comportera des aberrations chromatiques. Ces aberrations sont intimement liées à la forme de la lentille. Plus elle sera courbée, plus les composantes seront soit approchée du centre dans le cas de la composante rouge, soit éloignée du centre dans le cas de la composante bleue. La composante verte de l'image n'étant pas affectée significativement, elle sert donc de référence pour les modifications des deux autres composantes.
+    Il est possible de corriger ces aberrations chromatiques en modifiant les images initiales produites par notre pipeline OpenGL. En effet, en introduisant dans les images sources l'inverse de l'aberration chromatique observée, il est possible de recréer l'image réelle pour l'utilisateur. Et les shaders sont adaptés pour cette tâche.
+Les shaders sont des programmes qui sont compilés à l'exécution du programme par les pilotes du chipset graphique, qu'il s'agisse d'une carte graphique intégrée à un processeur, ou une carte graphique dédié. Ils servent à modifier l'affichage d'un élément d'une scène 3D en appliquant des traitements sur les sommets de son maillage, ou les pixels calculés dans sa représentation 2D finale. Les shaders sont intégrés à SOFA, et il est possible d'utiliser des composants pour les ajouter à la scène. 
+Grâce a ces shaders, il devient aisé d'appliquer notre modification. En effet, il suffit pour chaque pixel de sélectionner une composante plus ou moins loin, en fonction d'un ratio depuis le centre de l'image. Cette transformation est donné par la formule :
     
-(st.x-0.5)*factX +0.5;
+(position.x-0.5)*factX +0.5;
 
-Ou ST est les coordonnées du pixel courant, et FactX est le facteur attribué a la composante. Une valeur supérieure a 1 va attirer les composantes vers le centre de l?image. A l?inverse, une valeur inférieure va pousser les composantes vers les bordures.
-Ce facteur est intimement dépendant des caractéristiques des lentilles disponibles sur les HMD. Il est donc nécessaire de le recalculer pour chaque casque disponible. Mais il sera également le même quel que soit la scène. Naturellement, cette modification sera visible sur l?image d?origine, si elle est diffusé sur un écran. Mais elle compensera les distorsions créés par les lentilles du HMD. C?est pourquoi il est conseillé de créer deux scènes, l?une qui tournera sur un écran classique, et l?autre qui sera sur un HMD.
+Où ?position? contient les coordonnées du pixel courant, et FactX est le facteur attribué à la composante. Une valeur supérieure à 1 va attirer les composantes vers le centre de l'image. A l'inverse, une valeur inférieure va pousser les composantes vers les bordures.
+Ce facteur est intimement dépendant des caractéristiques des lentilles disponibles sur les HMD. Il est donc nécessaire de le recalculer pour chaque lentille différente. Mais il sera également le même quel que soit la scène. Naturellement, cette modification sera visible sur l'image d'origine, si elle est diffusée sur un écran. Mais elle compensera les distorsions créées par les lentilles du HMD. C'est pourquoi il est conseillé de créer deux scènes, l'une qui tournera sur un écran classique, et l'autre qui sera sur un HMD.
 
 
-VisualManagerPass = Dessiner les obgets taggés dans un FBO
-Render pass element: render the relevant tagged objects in a FBO
-CompositingVisualLoop = render multiple passes and composite them into one single rendered frame
+\SpecialSection{Bilan}
 
-\chapter{Opération du crane}
-Durant l?opération d?un anévrisme, le neurochirurgien peut avoir a ouvrir le crane du patient afin d?accéder a l?anévrisme. Mais cette étape n?a pas encore été modélisé. C?est pourquoi on m?a demandé de créer une scène ou l?utilisateur pourrait s'exercer a cela.
-\section{Déroulement en bloc opératoire}
-    Une fois la chair découpé et écarté, les neurochirurgiens vont devoir ouvrir le crane. Il s?agit d?une étape très importante qui donnera un chemin au docteur afin de pratiquer l?opération. Elle est standard et fixe.
+    Le support de l'oculus a été présenté durant le congrès de neurochirurgie. Afin de s'approcher du caractère immobile du binoculaire, un support a été réalisé afin de soutenir le casque.
 
-Le neurochirurgien va d?abord bruler le crane grace a une pince électrique, afin de dessiner 3 cercles et les liens entre ces trois cercles. Ces dessins vont lui servir de guide afin de percer 3 trous grâce a une perceuse spéciale qui s'arrête dès que l?os est complètement percé, afin d?épargner le cerveau juste en dessous, puis découpe l?os en suivant les courbures de l?avant du crane grâce a une scie sauteuse avec frein afin la aussi d?épargner le cerveau.
+Plusieurs personnes dont des étudiants en médecine et des neurochirurgiens ont testé les simulations avec et sans le casque. 
+    Tout d'abord, la plupart des personnes n'ont pas trouvé l'oculus utile. Ils ont reproché de ne pas réussir à localiser les outils contrôlés par rapport au cerveau. Ils avançaient à tâtons  jusqu'à avoir une réponse visuelle ou haptique lorsqu'ils touchaient le cerveau. Cependant, le casque n'est pas en cause ici. Ceci est probablement dû au manque d'ombrage dans la scène. Afin d'améliorer ces points, il est possible d'ajouter des shaders d'ombrage aux objets.
+De plus, les mouvements de caméras étaient gérés par une aide externe, avec la souris. Il est possible d'ajouter à SOFA la gestion des mouvements de la caméra par le casque lui-même.
+    De plus, les testeurs ont également reproché aux outils d'avoir besoin de mouvements très amples afin de déplacer les outils. Il suffit de réduire la taille du bras mécanique dans la simulation afin de corriger le problème.
 
-\section{Modélisation des outils}
-Le seul outil à modéliser est la pince électrique. Cette pince peut être remplacé par un outil avec un simple embout, étant donné que les deux mâchoires doivent être quasiment en contact pour délivrer un courant, et que le dessin est simplement montré par un trait sur le crane. J?ai donc choisi comme représentation un stylo, car il permet de symboliser le point de contact avec la pointe de celui ci.
-\subsection{Le chargement des données}
-    Il existe énormément de méthodes pour stocker des maillages dans un fichier. Et pour chaque type de fichier existe un composant MeshXXXLoader, où le XXX désigne le type de fichier que le composant est capable d?ouvrir. Ces fichiers vont ensuite stocker dans leurs datas les informations du maillage donné. Il est par la suite possible de les afficher par l?intermédiaire d?un OGLModel. Ce composant peut soit utiliser les informations d?un loader, soit une URL afin d?afficher un maillage. Mais il ne peux charger que des fichiers enregistrés en ?.obj?.
+    État de la scène de percée du crâne, Performances IPS, vue sur les améliorations disponibles
+    Actuellement, la simulation de la percée du crâne permet de modifier le maillage. Dans le futur, il faudra ajouter la gestion d'un bouton qui active la percée. 
+    L'appel du marchingCubes réduit les performances à 20 images par seconde sur une machine performante, ce qui est acceptable. 
     
-\subsection{Le modèle de collision}
-    La collision dans les moteurs de jeu ont toujours été des tests très couteux en temps de calcul. En effet, afin de tester une collision, on doit tester tous les triangles des deux maillages entre eux. Cela peux atteindre des temps de calculs en (N^^2). C?est pourquoi l?une des solutions est d?utiliser deux maillages. Le premier mailalge servira a afficher l?objet. Ce maillage pourra etre détaillé afin de rendre quelque chose de fidèle. Le second sera un mailalge très épuré qui reprendra la forme globale du maillage visuel. 
-    J?ai donc utilisé blender afin de créer un maillage épuré de l?outil
-\subsection{Les mappings en Sofa}
-    Le mapping est le mécanisme qui lie deux maillages entre eux. C?est a dire que toute modification appliqué a l?un des maillages va se transférer à l?autre maillage. Cette liaison dépend du mapping utilisé dans les simulations.
-    L?identityMapping permet de mapper deux maillages identiques. Le rigidMapping permet quand a lui de lier deux objets par rapport a leur centre de gravité. Ainsi, tout mouvement dans l?espace se résumera a un mouvement de translation et de rotation.
-    L?outil ne sera pas modifié, on peux donc utiliser un rigidMapping afin de lier le modèle visuel avec le mechanicalState de l?objet. (Pourquoi? Sa sort d?ou? Hein?)
-\subsection{Le Phantom omni}
-    L?omni est un bras mécanique à retour d?effort. Il possède cinq axes de rotation mais seulement 3 permettent de fournir un effort, sur leur axe de rotation. Il dispose malgré tout d?un positionnement à six degrés de liberté. 
-    Sofa possède plusieurs modules de gestion de l?omni, mais seulement l?un des trois fonctionnait lors de mon stage. J?ai donc choisi le NOD.
-    Dans sofa, le NOD a un fonctionnement un peu particulier. Il va chercher un mechanicalObject de type Rigid dans le noeud courant, et va lui transférer tout mouvement subit par le stylet. 
-    Le calcul des forces est lui calculé par les XXXSpringForceField. Ces composants vont accrocher des ressorts entre deux MO. Plus ce ressort sera étiré, plus les forces calculés seront importantes, et plus le Phantom renverra de force. Afin de créer cette différence, ce ressort sera placé entre le MO de l?omni et le MO de la collision de l?instrument. Ainsi, quand notre instrument va entrer en collision avec un objet, il va se séparer du MO de l?omni qui ne dispose pas de collision, ce qui va étirer le ressort, qui va engendrer des forces sur le phantom.
-\section{Modélisation du crane}
-    Une fois l?outil créé, il faut modéliser un crane humain. De la, plusieurs objectifs sont a réaliser.
+    Le modèle de collision a été créé par simplification d'un maillage tiré du MarchingCubes. Il serait possible d'ajouter des algorythmes de décimation de maillage dans sofa afin de générer dynamiquement un maillage simplifié au modèle de collision. Cela permettrait a son tour de généraliser la scène a n'importe quel image, et donc n'importe quel IRM de patient.
+L'outil reste à une certaine distance du modèle de collision. SOFA utilise une distance minimale de détection de collision. Et cette distance doit être trop élevée, ce qui empêche l'outil de s'approcher suffisamment du crâne. En réduisant la valeur ContactDistance, dans le composant MinProximityIntersection, il est possible de réduire cette distance minimale de contact afin de régler ce problème.
+    Enfin, le tracé pour l'instant n'est pas satisfaisant, car les rayures créés par l'outil ne sont pas suffisamment visibles. Il faudra tester la simulation avec une distance de collision minimale réduite, et si les résultats ne sont toujours pas acceptables, il faudra utiliser une autre méthode comme par exemple l'utilisation de particules lorsque l'outil est en contact avec le crane.
 
-\subsection{Les Objectifs}
-    Le principal objectif de la scène est que les utilisateurs doivent pouvoir voir leur tracé sur le crane. 
-Un autre de ces objectifs est de pouvoir comparer le tracé de l?utilisateur avec le tracé d?un chirurgien expérimenté.
-Un troisième objectif est de permettre de percer le crane.
-Un dernier objectif consiste a atteindre les 60 images par seconde constants.
 
-\subsection{Une image}
-    Avant une opération d?anévrisme cérébral, chaque patient doit passer un IRM. Cet IRM enregistre couche par couche les différentes parties du cerveau et permet de naviguer parmi ces couches. Ces images sont par la suite enregistrés dans différents formats possibles pour pouvoir être utilisés par la suite.
-    On m?a confié plusieurs de ces fichiers. Tous avait une base commune : Un crane sans mâchoire. Les parties de l?image a l'intérieur du crane sont a 1, tandis que les parties a l'extérieur sont a 0. 
-    Les autres fichiers contiennent un crane avec un énorme trou. Il s?agit du modèle utilisé dans les autres scènes déjà existantes. Le trou a été réalisé bien plus grand afin de faciliter les démonstrations. 
-    Il existe un plugin Image dans sofa qui permet de traiter des images. Ce plugin contient plusieurs composants capables de charger des images, de les modifier ou de les transformer. 
+\SpecialSection{Conclusion}
 
-\subsection{Le marching cube}
-    Un composant particulier de sofa m?a aidé a le transformer en mesh : le MarchingCubesEngine.
-    Le MarchingCube est une technique publié en 1987. Elle permet de transformer une image 3D en maillage. L?idée est de séparer l?espace en cubes de taille identique, mais ces cubes n?ont pas forcément besoin de correspondre à la taille d?un pixel de l?image. Dans ce cas, on utilisera une moyenne pour chaque sommet des cubes, qui pourront être utilisés pour chaque cube. On construit par la suite un tableau de référence. On va définir également une valeur, appelé Iso-value. Cette valeur va être une valeur seuil qui va nous indiquer si le sommet actuel est dans la figure ou ne l?es pas. Ainsi, si le sommet possède une valeur supérieure a l?isoValue, on placera sa valeur a 1. Sinon, sa valeur sera de 0. Pour chaque cube, on va récupérer les valeurs de chaque sommet. Étant donné que l?on a huit sommets,  on se retrouve avec un octet représentant les différentes possibilités de remplissage, soit 256 valeurs de référence. Mais il est possible de simplifier les calculs. Il est possible de retrouver certains modèles simplement en . Pour chaque octet calculé, on prends la correspondance dans le tableau de référence. On obtient ainsi un maillage complet associé a l?image de départ. 
+De plus en plus de simulations fidèles a la réalité voient le jour dans le domaine de la médecine. Ces simulations sont actuellement destinés aux étudiants en formation afin de leur fournir un support pratique et répétable pour leurs exercices du fait de leurs imperfections.
 
-\subsection{La collision}
-    Comme dit précédemment, la collision est un
+Mais ces simulations pourront un jour être personnalisés avec les données d'un patient, et le médecin pourra utiliser des outils équivalents à ceux de son bloc pour s'exercer avant une opération importante. 
+
+Et les tests auprès des étudiants ont déjà commencés avec les scènes intracrâniennes 
+
+    La simulation dispose actuellement d'un outil controlé par un Phantom. Cet outil peut creuser dans un crane, mais uniquement en surface. Cela laisse une trace qui indique a l'utilisateur le chemin parcouru. De plus, le support des casques est complètement implémenté, et fonctionnel. 
+
+Ce stage a été très enrichissant pour moi car il m'a permis de découvrir les applications de l'imagerie et de la modélisation 3D en médecine. Il m'a permis de participer a ces enjeux au travers de quelques missions auprès des neurochirurgiens ou j'ai découvert une autre façon de penser, ainsi que des besoins nouveaux. De plus, il m'a permis de me familiariser avec la gestion d'un gros projet.  
+
+
 
 
 \end{document}
