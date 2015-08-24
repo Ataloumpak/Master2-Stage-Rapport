@@ -326,11 +326,13 @@ Le neurochirurgien est sujet à un stress important durant l'opération.
 
 \chapter{Création de la simulation}
 Maintenant que nous connaissons les besoins des utilisateurs et le déroulement de l'opération, nous pouvons diviser les principales parties de l'opération à modéliser :
-La découpe du crâne
-La séparation des tissus entre les lobes de cerveau
-La séparation des bris pour libérer l'anévrisme
-Le clippage de l'anévrisme
-Le clampage de l'artère 
+\begin{itemize}
+\item La découpe du crâne
+\item La séparation des tissus entre les lobes de cerveau
+\item La séparation des bris pour libérer l'anévrisme
+\item Le clippage de l'anévrisme
+\item Le clampage de l'artère
+\end{itemize} 
 Les parties intracrâniennes des simulations ont déjà été réalisées par un autre membre de l'équipe. Nous allons nous intéresser pour la suite de ce rapport à la réalisation de la partie "Découpe du crâne".
 
 \section{SOFA}
@@ -395,7 +397,7 @@ Le Marching Cube est déjà implémenté dans SOFA, contrairement à l'octree concern
     Blender fournit un composant "decimate". Ce composant va permettre d'effacer des points d'un maillage, tout en prenant en compte la forme de celui-ci. Blender nous laisse le choix du pourcentage de triangles restants sur le maillage. 
 \begin{figure}[!ht]
   \centering
-  \includegraphics[height=8cm]{Crane_100_100_cote_short}
+  \includegraphics[height=6cm]{Crane_100_100_cote_short}
   \caption{Maillage original du crâne}
   \label{fig:ustl}
 \end{figure}
@@ -403,7 +405,7 @@ Le Marching Cube est déjà implémenté dans SOFA, contrairement à l'octree concern
 
 \begin{figure}[!ht]
   \centering
-  \includegraphics[height=8cm]{Crane_06_100_cote_short}
+  \includegraphics[height=6cm]{Crane_06_100_cote_short}
   \caption{Maillage décimé à 94 \%, il reste 6\% du maillage d'origine, et la forme est conservé}
   \label{fig:ustl}
 \end{figure}
@@ -411,7 +413,8 @@ Le Marching Cube est déjà implémenté dans SOFA, contrairement à l'octree concern
 La forme globale du crane a été conservé, tandis que les triangles superflus ont été supprimés.
 \section{Les mappings en SOFA}
     Le mapping est le mécanisme qui lie deux maillages entre eux. C'est à dire que toute modification ou force appliquée à l'un des maillages va se transférer à l'autre. Cette liaison dépend du type de mapping utilisé dans les simulations.
-    Nous avons utilisé dans la scène un mapping Rigide. Ce type de mapping considère les maillages comme non déformables. Ainsi, toute force appliquée où que ce soit sur l'un des maillages est équivalent à l'appliquer à son centre. Une fois toutes les forces calculées, l'objet se déplacera.
+    Nous avons utilisé dans la scène un mapping Rigide. Ce type de mapping considère les maillages comme non déformables. Ainsi, toute force appliquée où que ce soit sur l'un des maillages est équivalent à l'appliquer à son centre. Une fois toutes les forces calculées, l'objet se déplacera. 
+	Dans la simulation, les modèles de collisions sont mappés sur les maillages affichés.
     
 \chapter{La percée du crâne}
 	L'idée est de traquer la position d'un composant puis de transformer cette position en coordonnées pour modifier l'image. On réappliquera après le MarchingCubes afin de recréer un maillage sans les parties effacés.\\
@@ -423,9 +426,10 @@ La forme globale du crane a été conservé, tandis que les triangles superflus ont
 \\    Le système de template du C++ permet une généricité lors de la compilation. Cependant, il est nécessaire de préciser toutes les combinaisons possibles dans le code. Or, on souhaite que notre composant soit le plus générique possible. Nous avons donc abandonné l'idée de traquer un composant particulier. Le tracking de composant a été remplacé par un simple champ de position. Cela rend le composant bien plus polyvalent, en permettant à l'utilisateur de choisir le point à modifier. Ce point peut être modifié en Python durant l'exécution. Le composant dispose également d'une zone de modification dans l'image ainsi que d'un booléen de marche/arrêt. Le booléen permet de simuler le bouton marche/arrêt de l'outil, et le vecteur permettra de prendre en compte la mise à l'échelle de l'image par rapport à celle du MarchingCubes.
     Enfin, en changeant la valeur des voxels dans l'image, il est possible de modifier le maillage afin de retirer des triangles ou d'en ajouter. 
     SOFA possède un mécanisme de variable dirty. Ce mécanisme sert à conserver des données tant qu'un composant ne demande pas accès à cette donnée. Actuellement, le composant force la mise à jour des composants qui dépendent de lui grâce à ce mécanisme étant donné qu'aucun autre composant ne fait appel aux données du MarchingCubes.
-
+\section{Une autre solution}
+	Une autre solution a été envisagé. Un composant SOFA permet de transformer un maillage en cubes contenant ce maillage. Il a été proposé de colorer ces maillages de cubes puis de changer leur couleur lorsque l'outil était assez proche. Mais cette solution demandais un calcul de collision bien plus lourd que ce qui est déjà implémenté. L'idée fut rejeté, malgré une partie du travail accompli.
 \chapter{Haptique}
-    Lors de l'opération, le chirurgien ressent la physique du patient. Il prend appui sur le crane de celui-ci, il ressent les organes qu'il touche lors de l'opération, et il utilise ces retours afin d'augmenter sa perception de la réalité. 
+    Lors de l'opération, le chirurgien ressent la physique du patient. Il prend appui sur le crane de celui-ci, il ressent les organes qu'il touche lors de l'opération, et il utilise ces retours afin d'augmenter sa perception de la réalité. Il est possible de simuler cette perception grâce a des dispositifs haptiques.
     \section{Presentation}
 L'omni est un dispositif d'interaction mécanique à retour d'effort. 
 \begin{figure}[!ht]
@@ -435,9 +439,9 @@ L'omni est un dispositif d'interaction mécanique à retour d'effort.
   \label{fig:ustl}
 \end{figure}
 
-Il possède cinq axes de rotation permettant de le situer dans l'espace, par rapport à l'élément central, mais seulement 3 permettent de fournir un effort, sur leur axe de rotation. Il dispose malgré tout d'un positionnement à six degrés de liberté. 
+Il possède cinq axes de rotation permettant de situer un point dans l'espace, par rapport à l'élément central, mais seulement 3 permettent de fournir un effort, sur leur axe de rotation. Il dispose malgré tout d'un positionnement à six degrés de liberté. 
 \section{Implémentation}
-    Ruspini, Kolarov et Khatib ont montré qu'il était possible de simuler un système de retour haptique  en simulant un point dans la scène, qui attire l'objet que l'on souhaite contrôler.\cite{HapticInteraction} Cette méthode s'appèle le god-object. Zilles et Salisbury ont ajoutés qu'il était possible de simuler différents rendus haptiques tel que la friction et la texture d'une surface de manière convaincante par des modulations précises du vecteur force appliqué à l'utilisateur dans le cas d'une modélisation god-object.\cite{GodObject}
+    Ruspini, Kolarov et Khatib ont montré qu'il était possible de simuler un système de retour haptique  en simulant un point dans la scène, qui attire l'objet que l'on souhaite contrôler.\cite{HapticInteraction} Cette méthode s'appelle le god-object. Zilles et Salisbury ont ajoutés qu'il était possible de simuler différents rendus haptiques tel que la friction et la texture d'une surface de manière convaincante par des modulations précises du vecteur force appliqué à l'utilisateur dans le cas d'une modélisation god-object.\cite{GodObject}
     Ainsi, on va ajouter à la scène un objet qui sera guidé par le phantom. Cet objet servira d'objectif à atteindre pour notre outil modélisé. Pour réaliser cela, on ajoute un ressort entre les deux objets. Ce ressort va attirer l'outil à la position du phantom dans la scène et plus il sera étiré, plus les forces calculés seront importantes. 
 
 \chapter{Les casques de réalité virtuelle}
@@ -465,7 +469,7 @@ La stéréovision est le principe de perception de la 3D, c'est à dire déterminer 
     De manière générale, la stéréovision va tenter de tromper le cerveau en utilisant les paramètres donnés plus haut. Et les deux paramètres seront gérés différemment
 
 \section{Les casques de réalité virtuelle}
-    Les CRV possèdent soit deux écrans, soit un écran fusionné. Ces deux parties d'écrans sont visibles la plupart du temps au travers de lentilles qui viennent isoler la vision de chaque oeil, ayant pour effet de n'afficher qu'une moitié d'écran à chaque oeil. Durant le reste du rapport, nous ne parlerons que des casques à écran unique. Il est possible que les techniques soient légèrement différentes pour un casque à deux écrans.
+    Les casques de réalité virtuelle possèdent soit deux écrans, soit un écran fusionné. Ces deux parties d'écrans sont visibles la plupart du temps au travers de lentilles qui viennent isoler la vision de chaque ?il, ayant pour effet de n'afficher qu'une moitié d'écran à chaque ?il. Durant le reste du rapport, nous ne parlerons que des casques à écran unique. Il est possible que les techniques soient légèrement différentes pour un casque à deux écrans.
 Depuis quelques années, les casques de réalité virtuelle ont eu un regain de popularité. Ces casques sont maintenant compacts, les trackeurs de position sont très précis, et les écrans intégrés disposent d'une résolution suffisante pour garantir une immersion totale. De plus, le matériel se rapproche très efficacement du microscope opératoire utilisé. 
         
 \section{L'intégration}
@@ -473,7 +477,7 @@ Dans le cas de la stéréovision, nous avons besoin d'au moins deux images. Afin d
     Les framebuffers sont des tableaux gérés par OPENGL, et contenant des pixels. Le plus utilisé est le buffer de rendu, très souvent affiché à l'écran. Tout d'abord, on réalise un premier dessin sur une partie de l'écran, puis nous dessinerons une seconde image, sur l'autre moitié. Nous avons fait le choix de n'utiliser qu'une seule caméra afin de conserver les meme propriétés de rendu.
     Maintenant que nous savons comment dessiner les images, il faut nous intéresser à la manière de positionner les images afin d'avoir la stéréovision la plus réussie.
 
-Selon H.Yamanoue, il existe pour cela 2 méthodes de projection :
+Selon H.Yamanoue,\cite{cameraconfiguration} il existe pour cela 2 méthodes de projection :
 La méthode croisée, ou toed-in
 Les deux caméras sont séparées de quelques centimètres, et les normales des plans de chaque caméra se croisent en un point de l'espace.
 \begin{figure}[!ht]
@@ -497,10 +501,12 @@ Une limitation technique vient des lentilles courbes des HMD, cela implique que 
     Il est possible de corriger ces aberrations chromatiques en modifiant les images initiales produites par notre pipeline OpenGL. En effet, en introduisant dans les images sources l'inverse de l'aberration chromatique observée, il est possible de recréer l'image réelle pour l'utilisateur. Et les shaders sont adaptés pour cette tâche.
 Les shaders sont des programmes qui sont compilés à l'exécution du programme par les pilotes du chipset graphique, qu'il s'agisse d'une carte graphique intégrée à un processeur, ou une carte graphique dédié. Ils servent à modifier l'affichage d'un élément d'une scène 3D en appliquant des traitements sur les sommets de son maillage, ou les pixels calculés dans sa représentation 2D finale. Les shaders sont intégrés à SOFA, et il est possible d'utiliser des composants pour les ajouter à la scène. 
 Grâce à ces shaders, il devient aisé d'appliquer notre modification. En effet, il suffit pour chaque pixel de sélectionner une composante plus ou moins loin, en fonction d'un ratio depuis le centre de l'image. Cette transformation est donné par la formule :
-    
+    \begin{equation}
 (position.x-0.5)*factX +0.5;
+\end{equation}
 
-Où "position" contient les coordonnées du pixel courant, et FactX est le facteur attribué à la composante. Une valeur supérieure à 1 va attirer les composantes vers le centre de l'image. A l'inverse, une valeur inférieure va pousser les composantes vers les bordures.
+
+Où "position" contient les coordonnées du pixel courant, et FactX est le facteur attribué à la composante. Le terme 0.5 sert a centrer les coordonnées sur le point central de l'écran. Une valeur supérieure à 1 va attirer les composantes vers le centre de l'image. A l'inverse, une valeur inférieure va pousser les composantes vers les bordures.
 Ce facteur est intimement dépendant des caractéristiques des lentilles disponibles sur les HMD. Il est donc nécessaire de le recalculer pour chaque lentille différente. Mais il sera également le même quel que soit la scène. Naturellement, cette modification sera visible sur l'image d'origine, si elle est diffusée sur un écran. Mais elle compensera les distorsions créées par les lentilles du HMD. C'est pourquoi il est conseillé de créer deux scènes, l'une qui tournera sur un écran classique, et l'autre qui sera sur un HMD.
 
 
@@ -566,4 +572,27 @@ Le travail sur SOFA m'a montré de nouvelles manières de programmer et m'a confro
   \caption{Illustration de la phase de clampage de l'anévrisme après hémorragie.}
   \label{fig:ustl}
 \end{figure}
+
+\Annex{Ouverture du crane}
+\begin{figure}[!ht]
+  \centering
+  \includegraphics[height=6cm]{Test_00000002}
+  \caption{Crane sans affichage du modèle de collision.}
+  \label{fig:ustl}
+\end{figure}
+\begin{figure}[!ht]
+  \centering
+  \includegraphics[height=6cm]{Test_00000001}
+  \caption{Le passage du stylo n'es visible que quand le modèle de collision est affiché}
+  \label{fig:ustl}
+\end{figure}
+\Annex{Aberrations chromatiques}
+\begin{figure}[!ht]
+  \centering
+  \includegraphics[height=14cm]{CaduceusOculus}
+  \caption{Image après application des aberrations chromatiques dû aux lentilles}
+  \label{fig:ustl}
+\end{figure}
 \end{document}
+
+

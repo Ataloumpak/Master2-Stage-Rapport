@@ -23,8 +23,9 @@
 \contentsline {section}{\numberline {3.3}Le marching cube}{12}{section.10.3}
 \contentsline {section}{\numberline {3.4}Les Octree}{12}{section.10.4}
 \contentsline {section}{\numberline {3.5}Le mod\`ele de collision}{13}{section.10.5}
-\contentsline {section}{\numberline {3.6}Les mappings en SOFA}{13}{section.10.6}
+\contentsline {section}{\numberline {3.6}Les mappings en SOFA}{14}{section.10.6}
 \contentsline {chapter}{\numberline {Chapitre\ 4}La perc\'ee du cr\^ane}{15}{division.11}
+\contentsline {section}{\numberline {4.1}Une autre solution}{16}{section.11.1}
 \contentsline {chapter}{\numberline {Chapitre\ 5}Haptique}{17}{division.12}
 \contentsline {section}{\numberline {5.1}Presentation}{17}{section.12.1}
 \contentsline {section}{\numberline {5.2}Impl\'ementation}{18}{section.12.2}
@@ -36,3 +37,5 @@
 \contentsline {spsection}{Conclusion}{25}{division.15}
 \contentsline {spsection}{Bibliographie}{26}{division.16}
 \contentsline {chapter}{\numberline {Annexe\ A}Op\'erations de l'an\'evrisme}{27}{division.17}
+\contentsline {chapter}{\numberline {Annexe\ B}Ouverture du crane}{29}{division.18}
+\contentsline {chapter}{\numberline {Annexe\ C}Aberrations chromatiques}{30}{division.19}

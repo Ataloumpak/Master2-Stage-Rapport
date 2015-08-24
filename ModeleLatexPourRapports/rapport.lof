@@ -17,7 +17,7 @@
 \contentsline {figure}{\numberline {3.2}{\ignorespaces Repr\'esentation g\'eom\'etrique du stylo}}{11}{figure.10.2}
 \contentsline {figure}{\numberline {3.3}{\ignorespaces Repr\'esentation collisionnel du stylo}}{11}{figure.10.3}
 \contentsline {figure}{\numberline {3.4}{\ignorespaces Maillage original du cr\^ane}}{13}{figure.10.4}
-\contentsline {figure}{\numberline {3.5}{\ignorespaces Maillage d\'ecim\'e \`a 94 \%, il reste 6\% du maillage d'origine, et la forme est conserv\'e}}{14}{figure.10.5}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Maillage d\'ecim\'e \`a 94 \%, il reste 6\% du maillage d'origine, et la forme est conserv\'e}}{13}{figure.10.5}
 \addvspace {10\p@ }
 \contentsline {xchapter}{La perc\'ee du cr\^ane}{15}{division.11}
 \addvspace {10\p@ }
@@ -38,3 +38,8 @@
 \contentsline {figure}{\numberline {A.2}{\ignorespaces Illustration de la phase de s\'eparation de l'an\'evrisme.}}{27}{figure.17.2}
 \contentsline {figure}{\numberline {A.3}{\ignorespaces Illustration de la phase de clippage de l'an\'evrisme.}}{28}{figure.17.3}
 \contentsline {figure}{\numberline {A.4}{\ignorespaces Illustration de la phase de clampage de l'an\'evrisme apr\`es h\'emorragie.}}{28}{figure.17.4}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {B.1}{\ignorespaces Crane sans affichage du mod\`ele de collision.}}{29}{figure.18.1}
+\contentsline {figure}{\numberline {B.2}{\ignorespaces Le passage du stylo n'es visible que quand le mod\`ele de collision est affich\'e}}{29}{figure.18.2}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {C.1}{\ignorespaces Image apr\`es application des aberrations chromatiques d\^u aux lentilles}}{30}{figure.19.1}

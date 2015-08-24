@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.8.16)  24 AUG 2015 07:01
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.8.16)  24 AUG 2015 07:39
 entering extended mode
 **D:/Documents/Master/Rapport/Master2-Stage-Rapport/ModeleLatexPourRapports/rap
 port.tex
@@ -415,6 +415,15 @@ LaTeX Warning: Label `fig:ustl' multiply defined.
 
 LaTeX Warning: Label `fig:ustl' multiply defined.
 
+
+LaTeX Warning: Label `fig:ustl' multiply defined.
+
+
+LaTeX Warning: Label `fig:ustl' multiply defined.
+
+
+LaTeX Warning: Label `fig:ustl' multiply defined.
+
 )
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 136.
 LaTeX Font Info:    ... okay on input line 136.
@@ -496,7 +505,7 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <7> on input line 191.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <5> on input line 191.
-<img/logoLille1.jpg, id=159, 2868.7175pt x 1387.1825pt>
+<img/logoLille1.jpg, id=171, 2868.7175pt x 1387.1825pt>
 File: img/logoLille1.jpg Graphic file (type jpg)
 
 <use img/logoLille1.jpg>
@@ -558,14 +567,14 @@ ort.lof)
 
 ]
 Chapitre 1.
-<img/Embolisation.png, id=277, 334.24875pt x 313.17pt>
+<img/Embolisation.png, id=298, 334.24875pt x 313.17pt>
 File: img/Embolisation.png Graphic file (type png)
 
 <use img/Embolisation.png>
 Package pdftex.def Info: img/Embolisation.png used on input line 276.
 (pdftex.def)             Requested size: 242.9489pt x 227.62204pt.
 
-<img/Clampage.png, id=278, 305.64188pt x 310.15875pt>
+<img/Clampage.png, id=299, 305.64188pt x 310.15875pt>
 File: img/Clampage.png Graphic file (type png)
  <use img/Clampage.png>
 Package pdftex.def Info: img/Clampage.png used on input line 284.
@@ -573,7 +582,7 @@ Package pdftex.def Info: img/Clampage.png used on input line 284.
 
 [4
 
-] <img/Voletpterionalstandard.jpg, id=286, 480.79625pt x 496.85625pt>
+] <img/Voletpterionalstandard.jpg, id=307, 480.79625pt x 496.85625pt>
 File: img/Voletpterionalstandard.jpg Graphic file (type jpg)
 
 <use img/Voletpterionalstandard.jpg>
@@ -642,32 +651,32 @@ Chapitre 2.
 ]
 Chapitre 3.
 
-<img/pince-bistouris-electriques-baionnette-irrigation-68645-107285.jpg, id=310
+<img/pince-bistouris-electriques-baionnette-irrigation-68645-107285.jpg, id=331
 , 580.41844pt x 208.52907pt>
 File: img/pince-bistouris-electriques-baionnette-irrigation-68645-107285.jpg Gr
 aphic file (type jpg)
 
 <use img/pince-bistouris-electriques-baionnette-irrigation-68645-107285.jpg>
 Package pdftex.def Info: img/pince-bistouris-electriques-baionnette-irrigation-
-68645-107285.jpg used on input line 347.
+68645-107285.jpg used on input line 349.
 (pdftex.def)             Requested size: 475.1934pt x 170.71652pt.
 
-Overfull \hbox (19.94931pt too wide) in paragraph at lines 347--348
+Overfull \hbox (19.94931pt too wide) in paragraph at lines 349--350
  [][] 
  []
 
-<img/Stylot_short.png, id=311, 1013.28563pt x 374.14781pt>
+<img/Stylot_short.png, id=332, 1013.28563pt x 374.14781pt>
 File: img/Stylot_short.png Graphic file (type png)
 
 <use img/Stylot_short.png>
-Package pdftex.def Info: img/Stylot_short.png used on input line 357.
+Package pdftex.def Info: img/Stylot_short.png used on input line 359.
 (pdftex.def)             Requested size: 385.28447pt x 142.26378pt.
 
-<img/Stylot_collision_short.png, id=313, 777.65532pt x 508.90125pt>
+<img/Stylot_collision_short.png, id=334, 777.65532pt x 508.90125pt>
 File: img/Stylot_collision_short.png Graphic file (type png)
 
 <use img/Stylot_collision_short.png>
-Package pdftex.def Info: img/Stylot_collision_short.png used on input line 366.
+Package pdftex.def Info: img/Stylot_collision_short.png used on input line 368.
 
 (pdftex.def)             Requested size: 347.8295pt x 227.62204pt.
  [10
@@ -686,7 +695,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.10.1})
                                                   \fi \global \@mparbottom \...
 <output> ...specialoutput \else \@makecol \@opcol 
                                                   \@startcolumn \@whilesw \i...
-l.372 
+l.374 
        <D:/Documents/Master/Rapport/Master2-Stage-Rapport/ModeleLatexPourRappor
 ts/img/pince-bistouris-electriques-baionnette-irrigation-68645-107285.jpg>]
 [11pdfTeX warning (ext4): destination with the same identifier (name{figure.10.
@@ -703,7 +712,7 @@ ts/img/pince-bistouris-electriques-baionnette-irrigation-68645-107285.jpg>]
                                                   \fi \global \@mparbottom \...
 <output> ...specialoutput \else \@makecol \@opcol 
                                                   \@startcolumn \@whilesw \i...
-l.378 
+l.380 
       pdfTeX warning (ext4): destination with the same identifier (name{figure.
 10.3}) has been already used, duplicate ignored
 
@@ -718,25 +727,25 @@ l.378
                                                   \fi \global \@mparbottom \...
 <output> ...specialoutput \else \@makecol \@opcol 
                                                   \@startcolumn \@whilesw \i...
-l.378 
+l.380 
        <D:/Documents/Master/Rapport/Master2-Stage-Rapport/ModeleLatexPourRappor
 ts/img/Stylot_short.png> <D:/Documents/Master/Rapport/Master2-Stage-Rapport/Mod
 eleLatexPourRapports/img/Stylot_collision_short.png>] [12]
-<img/Crane_100_100_cote_short.png, id=330, 498.36188pt x 365.11406pt>
+<img/Crane_100_100_cote_short.png, id=351, 498.36188pt x 365.11406pt>
 File: img/Crane_100_100_cote_short.png Graphic file (type png)
 
 <use img/Crane_100_100_cote_short.png>
-Package pdftex.def Info: img/Crane_100_100_cote_short.png used on input line 39
-8.
-(pdftex.def)             Requested size: 310.69215pt x 227.62204pt.
+Package pdftex.def Info: img/Crane_100_100_cote_short.png used on input line 40
+0.
+(pdftex.def)             Requested size: 233.02101pt x 170.71652pt.
 
-<img/Crane_06_100_cote_short.png, id=331, 498.36188pt x 365.11406pt>
+<img/Crane_06_100_cote_short.png, id=352, 498.36188pt x 365.11406pt>
 File: img/Crane_06_100_cote_short.png Graphic file (type png)
 
 <use img/Crane_06_100_cote_short.png>
-Package pdftex.def Info: img/Crane_06_100_cote_short.png used on input line 406
+Package pdftex.def Info: img/Crane_06_100_cote_short.png used on input line 408
 .
-(pdftex.def)             Requested size: 310.69215pt x 227.62204pt.
+(pdftex.def)             Requested size: 233.02101pt x 170.71652pt.
  [13pdfTeX warning (ext4): destination with the same identifier (name{figure.10
 .4}) has been already used, duplicate ignored
 
@@ -751,15 +760,9 @@ Package pdftex.def Info: img/Crane_06_100_cote_short.png used on input line 406
                                                   \fi \global \@mparbottom \...
 <output> ...specialoutput \else \@makecol \@opcol 
                                                   \@startcolumn \@whilesw \i...
-
-\newpage ...erypar {}\fi \par \vfil \penalty -\@M 
-                                                  
-...
-l.416 \chapter
-              {La percée du crâne} <D:/Documents/Master/Rapport/Master2-Stage-R
-apport/ModeleLatexPourRapports/img/Crane_100_100_cote_short.png>] [14pdfTeX war
-ning (ext4): destination with the same identifier (name{figure.10.5}) has been 
-already used, duplicate ignored
+l.418 
+      pdfTeX warning (ext4): destination with the same identifier (name{figure.
+10.5}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
@@ -770,23 +773,21 @@ already used, duplicate ignored
 
 \@opcol ...lumn \@outputdblcol \else \@outputpage 
                                                   \fi \global \@mparbottom \...
-<argument> \@opcol 
-                   \@makefcolumn \@deferlist 
-\@whilesw #1\fi #2->#1#2
-                        \@iwhilesw {#1#2}\fi \fi 
-...
-l.416 \chapter
-              {La percée du crâne} <D:/Documents/Master/Rapport/Master2-Stage-R
-apport/ModeleLatexPourRapports/img/Crane_06_100_cote_short.png>]
+<output> ...specialoutput \else \@makecol \@opcol 
+                                                  \@startcolumn \@whilesw \i...
+l.418 
+       <D:/Documents/Master/Rapport/Master2-Stage-Rapport/ModeleLatexPourRappor
+ts/img/Crane_100_100_cote_short.png> <D:/Documents/Master/Rapport/Master2-Stage
+-Rapport/ModeleLatexPourRapports/img/Crane_06_100_cote_short.png>] [14]
 Chapitre 4.
 [15
 
 ] [16]
 Chapitre 5.
-<img/Omni.jpg, id=351, 3276.24pt x 2457.18pt>
+<img/Omni.jpg, id=372, 3276.24pt x 2457.18pt>
 File: img/Omni.jpg Graphic file (type jpg)
  <use img/Omni.jpg>
-Package pdftex.def Info: img/Omni.jpg used on input line 433.
+Package pdftex.def Info: img/Omni.jpg used on input line 437.
 (pdftex.def)             Requested size: 303.44739pt x 227.62204pt.
  [17
 
@@ -804,13 +805,16 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.12.1})
                                                   \fi \global \@mparbottom \...
 <output> ...specialoutput \else \@makecol \@opcol 
                                                   \@startcolumn \@whilesw \i...
-l.442 
-       <D:/Documents/Master/Rapport/Master2-Stage-Rapport/ModeleLatexPourRappor
-ts/img/Omni.jpg>] [18]
+<argument> \@secpenalty 
+                        
+...
+l.443 \section
+              {Implémentation} <D:/Documents/Master/Rapport/Master2-Stage-Rappo
+rt/ModeleLatexPourRapports/img/Omni.jpg>] [18]
 Chapitre 6.
 
 <img/microscopie-operatoire-microscope-operatoire-neurochirurgie-chirurgie-epin
-e-dorsale-chirurgie-orl-69446-4789125.jpg, id=364, 426.59375pt x 465.74pt>
+e-dorsale-chirurgie-orl-69446-4789125.jpg, id=385, 426.59375pt x 465.74pt>
 File: img/microscopie-operatoire-microscope-operatoire-neurochirurgie-chirurgie
 -epine-dorsale-chirurgie-orl-69446-4789125.jpg Graphic file (type jpg)
 
@@ -818,7 +822,7 @@ File: img/microscopie-operatoire-microscope-operatoire-neurochirurgie-chirurgie
 epine-dorsale-chirurgie-orl-69446-4789125.jpg>
 Package pdftex.def Info: img/microscopie-operatoire-microscope-operatoire-neuro
 chirurgie-chirurgie-epine-dorsale-chirurgie-orl-69446-4789125.jpg used on input
- line 448.
+ line 452.
 (pdftex.def)             Requested size: 208.48598pt x 227.62204pt.
  [19
 
@@ -840,22 +844,22 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.13.1})
 \@trivlist ...epadd \partopsep \else \unskip \par 
                                                   \fi \if@inlabel \@noparite...
 ...
-l.456 \begin{itemize}
+l.460 \begin{itemize}
                       <D:/Documents/Master/Rapport/Master2-Stage-Rapport/Modele
 LatexPourRapports/img/microscopie-operatoire-microscope-operatoire-neurochirurg
 ie-chirurgie-epine-dorsale-chirurgie-orl-69446-4789125.jpg>] [20]
-<img/VisionToedIn.png, id=374, 487.06969pt x 514.17094pt>
+<img/VisionToedIn.png, id=396, 487.06969pt x 514.17094pt>
 File: img/VisionToedIn.png Graphic file (type png)
 
 <use img/VisionToedIn.png>
-Package pdftex.def Info: img/VisionToedIn.png used on input line 481.
+Package pdftex.def Info: img/VisionToedIn.png used on input line 485.
 (pdftex.def)             Requested size: 215.62679pt x 227.62204pt.
 
-<img/visionParalelle.png, id=375, 761.09344pt x 684.30656pt>
+<img/visionParalelle.png, id=397, 761.09344pt x 684.30656pt>
 File: img/visionParalelle.png Graphic file (type png)
 
 <use img/visionParalelle.png>
-Package pdftex.def Info: img/visionParalelle.png used on input line 490.
+Package pdftex.def Info: img/visionParalelle.png used on input line 494.
 (pdftex.def)             Requested size: 253.1591pt x 227.62204pt.
  [21pdfTeX warning (ext4): destination with the same identifier (name{figure.13
 .2}) has been already used, duplicate ignored
@@ -871,10 +875,14 @@ Package pdftex.def Info: img/visionParalelle.png used on input line 490.
                                                   \fi \global \@mparbottom \...
 <output> ...specialoutput \else \@makecol \@opcol 
                                                   \@startcolumn \@whilesw \i...
-l.500 
-       <D:/Documents/Master/Rapport/Master2-Stage-Rapport/ModeleLatexPourRappor
-ts/img/VisionToedIn.png>] [22pdfTeX warning (ext4): destination with the same i
-dentifier (name{figure.13.3}) has been already used, duplicate ignored
+<everydisplay> 
+               \check@mathfonts \the \everydisplay 
+...
+l.504     \begin{equation}
+                           <D:/Documents/Master/Rapport/Master2-Stage-Rapport/M
+odeleLatexPourRapports/img/VisionToedIn.png>] [22pdfTeX warning (ext4): destina
+tion with the same identifier (name{figure.13.3}) has been already used, duplic
+ate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
@@ -891,15 +899,15 @@ dentifier (name{figure.13.3}) has been already used, duplicate ignored
 \newpage ...erypar {}\fi \par \vfil \penalty -\@M 
                                                   
 ...
-l.507 \chapter
+l.513 \chapter
               {Bilan} <D:/Documents/Master/Rapport/Master2-Stage-Rapport/Modele
 LatexPourRapports/img/visionParalelle.png>]
 Chapitre 7.
-<img/IMG_20150323_162037.jpg, id=385, 1842.885pt x 2457.18pt>
+<img/IMG_20150323_162037.jpg, id=410, 1842.885pt x 2457.18pt>
 File: img/IMG_20150323_162037.jpg Graphic file (type jpg)
 
 <use img/IMG_20150323_162037.jpg>
-Package pdftex.def Info: img/IMG_20150323_162037.jpg used on input line 512.
+Package pdftex.def Info: img/IMG_20150323_162037.jpg used on input line 518.
 (pdftex.def)             Requested size: 170.68915pt x 227.62204pt.
  [23
 
@@ -917,7 +925,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.14.1})
                                                   \fi \global \@mparbottom \...
 <output> ...specialoutput \else \@makecol \@opcol 
                                                   \@startcolumn \@whilesw \i...
-l.520 
+l.526 
        <D:/Documents/Master/Rapport/Master2-Stage-Rapport/ModeleLatexPourRappor
 ts/img/IMG_20150323_162037.jpg>] [24]
 (D:\Documents\Master\Rapport\Master2-Stage-Rapport\ModeleLatexPourRapports\rapp
@@ -944,45 +952,30 @@ r.nvidia.com/GPUGems2/gpugems2_chapter37.html\T1/cmr/m/n/10 .
 
 ]
 Annexe A.
-<img/scene1.png, id=406, 803.0pt x 602.25pt>
+<img/scene1.png, id=431, 803.0pt x 602.25pt>
 File: img/scene1.png Graphic file (type png)
  <use img/scene1.png>
-Package pdftex.def Info: img/scene1.png used on input line 547.
+Package pdftex.def Info: img/scene1.png used on input line 553.
 (pdftex.def)             Requested size: 227.61984pt x 170.71652pt.
 
-<img/scene2.png, id=407, 803.0pt x 602.25pt>
+<img/scene2.png, id=432, 803.0pt x 602.25pt>
 File: img/scene2.png Graphic file (type png)
  <use img/scene2.png>
-Package pdftex.def Info: img/scene2.png used on input line 553.
+Package pdftex.def Info: img/scene2.png used on input line 559.
 (pdftex.def)             Requested size: 227.61984pt x 170.71652pt.
 
-<img/scene3.png, id=408, 803.0pt x 602.25pt>
+<img/scene3.png, id=433, 803.0pt x 602.25pt>
 File: img/scene3.png Graphic file (type png)
  <use img/scene3.png>
-Package pdftex.def Info: img/scene3.png used on input line 559.
+Package pdftex.def Info: img/scene3.png used on input line 565.
 (pdftex.def)             Requested size: 227.61984pt x 170.71652pt.
 
-<img/scene4.png, id=409, 803.0pt x 602.25pt>
+<img/scene4.png, id=434, 803.0pt x 602.25pt>
 File: img/scene4.png Graphic file (type png)
  <use img/scene4.png>
-Package pdftex.def Info: img/scene4.png used on input line 565.
+Package pdftex.def Info: img/scene4.png used on input line 571.
 (pdftex.def)             Requested size: 227.61984pt x 170.71652pt.
-Package minitoc Info: I0009
-(minitoc)             Listing minitoc auxiliary files. 
-(minitoc)             Creating the rapport.maf file.
-Package minitoc(hints) Info: I0053
-(minitoc(hints))             You have loaded the float package; 
-(minitoc(hints))             please be aware that the minitoc package 
-(minitoc(hints))             facilities can not be used for new types 
-(minitoc(hints))             of floats defined by the float package.
-
-
-Package minitoc(hints) Warning: W0024
-(minitoc(hints))                Some hints have been written 
-(minitoc(hints))                in the rapport.log file.
-
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 569.
-[27
+ [27
 
 pdfTeX warning (ext4): destination with the same identifier (name{figure.17.1})
  has been already used, duplicate ignored
@@ -1002,9 +995,9 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.17.1})
 \newpage ...erypar {}\fi \par \vfil \penalty -\@M 
                                                   
 ...
-l.569 \end{document}
-                    pdfTeX warning (ext4): destination with the same identifier
- (name{figure.17.2}) has been already used, duplicate ignored
+l.576 \Annex
+            {Ouverture du crane}pdfTeX warning (ext4): destination with the sam
+e identifier (name{figure.17.2}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
@@ -1021,12 +1014,12 @@ l.569 \end{document}
 \newpage ...erypar {}\fi \par \vfil \penalty -\@M 
                                                   
 ...
-l.569 \end{document}
-                     <D:/Documents/Master/Rapport/Master2-Stage-Rapport/ModeleL
-atexPourRapports/img/scene1.png (PNG copy)> <D:/Documents/Master/Rapport/Master
-2-Stage-Rapport/ModeleLatexPourRapports/img/scene2.png (PNG copy)>] [28pdfTeX w
-arning (ext4): destination with the same identifier (name{figure.17.3}) has bee
-n already used, duplicate ignored
+l.576 \Annex
+            {Ouverture du crane} <D:/Documents/Master/Rapport/Master2-Stage-Rap
+port/ModeleLatexPourRapports/img/scene1.png (PNG copy)> <D:/Documents/Master/Ra
+pport/Master2-Stage-Rapport/ModeleLatexPourRapports/img/scene2.png (PNG copy)>]
+[28pdfTeX warning (ext4): destination with the same identifier (name{figure.17.
+3}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
@@ -1042,9 +1035,9 @@ n already used, duplicate ignored
 \@whilesw #1\fi #2->#1#2
                         \@iwhilesw {#1#2}\fi \fi 
 ...
-l.569 \end{document}
-                    pdfTeX warning (ext4): destination with the same identifier
- (name{figure.17.4}) has been already used, duplicate ignored
+l.576 \Annex
+            {Ouverture du crane}pdfTeX warning (ext4): destination with the sam
+e identifier (name{figure.17.4}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
@@ -1060,29 +1053,133 @@ l.569 \end{document}
 \@whilesw #1\fi #2->#1#2
                         \@iwhilesw {#1#2}\fi \fi 
 ...
-l.569 \end{document}
+l.576 \Annex
+            {Ouverture du crane} <D:/Documents/Master/Rapport/Master2-Stage-Rap
+port/ModeleLatexPourRapports/img/scene3.png (PNG copy)> <D:/Documents/Master/Ra
+pport/Master2-Stage-Rapport/ModeleLatexPourRapports/img/scene4.png (PNG copy)>]
+Annexe B.
+<img/Test_00000002.png, id=443, 803.0pt x 602.25pt>
+File: img/Test_00000002.png Graphic file (type png)
+
+<use img/Test_00000002.png>
+Package pdftex.def Info: img/Test_00000002.png used on input line 579.
+(pdftex.def)             Requested size: 227.61984pt x 170.71652pt.
+
+<img/Test_00000001.png, id=444, 803.0pt x 602.25pt>
+File: img/Test_00000001.png Graphic file (type png)
+
+<use img/Test_00000001.png>
+Package pdftex.def Info: img/Test_00000001.png used on input line 585.
+(pdftex.def)             Requested size: 227.61984pt x 170.71652pt.
+ [29
+
+pdfTeX warning (ext4): destination with the same identifier (name{figure.18.1})
+ has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+<to be read again> \AtBegShi@Output 
+                                    \endgroup \set@typeset@protect 
+\@outputpage ...width {\@thefoot }\color@endbox }}
+                                                  \global \let \if@newlist \...
+
+\@opcol ...lumn \@outputdblcol \else \@outputpage 
+                                                  \fi \global \@mparbottom \...
+<output> ...specialoutput \else \@makecol \@opcol 
+                                                  \@startcolumn \@whilesw \i...
+
+\newpage ...erypar {}\fi \par \vfil \penalty -\@M 
+                                                  
+...
+l.589 \Annex
+            {Aberrations chromatiques}pdfTeX warning (ext4): destination with t
+he same identifier (name{figure.18.2}) has been already used, duplicate ignored
+
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+<to be read again> \AtBegShi@Output 
+                                    \endgroup \set@typeset@protect 
+\@outputpage ...width {\@thefoot }\color@endbox }}
+                                                  \global \let \if@newlist \...
+
+\@opcol ...lumn \@outputdblcol \else \@outputpage 
+                                                  \fi \global \@mparbottom \...
+<output> ...specialoutput \else \@makecol \@opcol 
+                                                  \@startcolumn \@whilesw \i...
+
+\newpage ...erypar {}\fi \par \vfil \penalty -\@M 
+                                                  
+...
+l.589 \Annex
+            {Aberrations chromatiques} <D:/Documents/Master/Rapport/Master2-Sta
+ge-Rapport/ModeleLatexPourRapports/img/Test_00000002.png (PNG copy)> <D:/Docume
+nts/Master/Rapport/Master2-Stage-Rapport/ModeleLatexPourRapports/img/Test_00000
+001.png (PNG copy)>]
+Annexe C.
+<img/CaduceusOculus.png, id=449, 352.31625pt x 606.01407pt>
+File: img/CaduceusOculus.png Graphic file (type png)
+
+<use img/CaduceusOculus.png>
+Package pdftex.def Info: img/CaduceusOculus.png used on input line 592.
+(pdftex.def)             Requested size: 231.58328pt x 398.33858pt.
+Package minitoc Info: I0009
+(minitoc)             Listing minitoc auxiliary files. 
+(minitoc)             Creating the rapport.maf file.
+Package minitoc(hints) Info: I0053
+(minitoc(hints))             You have loaded the float package; 
+(minitoc(hints))             please be aware that the minitoc package 
+(minitoc(hints))             facilities can not be used for new types 
+(minitoc(hints))             of floats defined by the float package.
+
+
+Package minitoc(hints) Warning: W0024
+(minitoc(hints))                Some hints have been written 
+(minitoc(hints))                in the rapport.log file.
+
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 596.
+[30
+
+pdfTeX warning (ext4): destination with the same identifier (name{figure.19.1})
+ has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+<to be read again> \AtBegShi@Output 
+                                    \endgroup \set@typeset@protect 
+\@outputpage ...width {\@thefoot }\color@endbox }}
+                                                  \global \let \if@newlist \...
+
+\@opcol ...lumn \@outputdblcol \else \@outputpage 
+                                                  \fi \global \@mparbottom \...
+<output> ...specialoutput \else \@makecol \@opcol 
+                                                  \@startcolumn \@whilesw \i...
+
+\newpage ...erypar {}\fi \par \vfil \penalty -\@M 
+                                                  
+...
+l.596 \end{document}
                      <D:/Documents/Master/Rapport/Master2-Stage-Rapport/ModeleL
-atexPourRapports/img/scene3.png (PNG copy)> <D:/Documents/Master/Rapport/Master
-2-Stage-Rapport/ModeleLatexPourRapports/img/scene4.png (PNG copy)>]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 569.
+atexPourRapports/img/CaduceusOculus.png>] [31]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 596.
 
 (D:\Documents\Master\Rapport\Master2-Stage-Rapport\ModeleLatexPourRapports\rapp
 ort.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 569.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 569.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 596.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 596.
 Package rerunfilecheck Info: File `rapport.out' has not changed.
-(rerunfilecheck)             Checksum: ACBC9B4A95E2E1C7B507B980AC2DD057;2532.
+(rerunfilecheck)             Checksum: 1D00184D2AE0B094C9F988566E959FF4;2721.
 
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 569.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 596.
  ) 
 Here is how much of TeX's memory you used:
- 9553 strings out of 493921
- 140441 string characters out of 3144861
+ 9589 strings out of 493921
+ 141027 string characters out of 3144861
  266936 words of memory out of 3000000
- 12401 multiletter control sequences out of 15000+200000
+ 12417 multiletter control sequences out of 15000+200000
  19591 words of font info for 44 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  36i,14n,58p,1268b,473s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1101,12 +1198,13 @@ MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1095.pk> <C:\Users\Ataloumpak
 sers\Ataloumpak\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecb
 x2488.pk><D:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx
 10.pfb><D:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12
-.pfb><D:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pf
-b><D:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><
-D:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on rapport.pdf (33 pages, 6792610 bytes).
+.pfb><D:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.p
+fb><D:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb>
+<D:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><D:
+/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on rapport.pdf (36 pages, 7205062 bytes).
 PDF statistics:
- 873 PDF objects out of 1000 (max. 8388607)
- 97 named destinations out of 1000 (max. 500000)
- 403 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 927 PDF objects out of 1000 (max. 8388607)
+ 108 named destinations out of 1000 (max. 500000)
+ 442 words of extra memory for PDF output out of 10000 (max. 10000000)
 
