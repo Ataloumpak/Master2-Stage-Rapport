@@ -193,9 +193,10 @@
 
 
 %-------------------------------------------------------------------
-\section{Resumé du stage}
+\section{Résumé du stage}
 
-Ce travail a pour but de présenter une méthode afin de rendre de la stéréovision dans un moteur graphique quelconque destiné à des casques de réalité virtuelle. Le second objectif est de présenter la création d'une simulation d'opération d'un anévrisme cérébral.
+J'ai effectué un stage de quatre mois et demi au sein de l'équpe DEFROST de INRIA a Villeneuve d'ascq. INRIA est un centre de recherche dans lequel j'ai travaillé sur la création d'un 
+Ce rapport a pour but de présenter les travaux réalisés durant mon stage de master dans l'équipe DEFROST a INRIA. une méthode afin de rendre de la stéréovision dans un moteur graphique quelconque destiné à des casques de réalité virtuelle et la création d'une simulation d'opération d'un anévrisme cérébral.
 
 
 %-------------------------------------------------------------------
@@ -204,7 +205,12 @@ Ce travail a pour but de présenter une méthode afin de rendre de la stéréovision
 
 %\DontFrameThisInToc
 \begin{ThesisAcknowledgments}
-
+Je remercie Mr Mario Sanz Lopez pour son soutien sur le matériel disponible.
+Je remercie également Mr Bruno CARREZ pour ses conseils de développement
+Je remercie Mr Julien BOSMAN pour son aide a plusieurs reprises a propos des modélisations 3D et utilisation de Blender
+Je remercie Mme Eulalie COEVOET ainsi qu'a Mr Jeremie DEQUIDT pour leur support concernant Sofa.
+Je remercie Mr Damien Marchal pour ses conseils sur mon rapport de stage
+Enfin je remercie tout particulièrement mon tuteur Christian DURIEZ qui m'a proposé ce stage dans son équipe et qui m'a encadré durant mon stage ainsi que Mr Laurent THINES qui m'a permis d'assister a une opération chirurgicale.
 
 
 
@@ -247,9 +253,9 @@ Les étudiants français en médecine passent une grande partie de leurs études en 
 %--------------------------------------------------------------------------------------
 %--------------------------------------------------------------------------------------
 
-\SpecialSection{table des abréviations et des sigles}
-\SpecialSection{la table des tableaux et figures}
-
+\SpecialSection{Table des abréviations et des sigles}
+\listoffigures  % table des figures
+%\listoftables   % table des tableaux
 
 
 \SpecialSection{Description de l'anévrisme}
@@ -330,7 +336,7 @@ Le seul outil à modéliser est la pince électrique.
 \begin{figure}[!ht]
   \centering
   \includegraphics[height=6cm]{pince-bistouris-electriques-baionnette-irrigation-68645-107285}
-  \caption{Le volet ptérioral standard, zone de la voie d'abord}
+  \caption{Une pince électrique, allumé par une pédale}
   \label{fig:ustl}
 \end{figure}
 
@@ -340,7 +346,7 @@ J'ai donc choisi comme représentation un stylo, car il permet de symboliser le p
 \begin{figure}[!ht]
   \centering
   \includegraphics[height=8cm]{Stylot_short}
-  \caption{Le volet ptérioral standard, zone de la voie d'abord}
+  \caption{Représentation géométrique du stylo}
   \label{fig:ustl}
 \end{figure}
 
@@ -349,7 +355,7 @@ Les modèles de collision ont besoin d'être simplifiés au maximum afin de conserv
 \begin{figure}[!ht]
   \centering
   \includegraphics[height=8cm]{Stylot_collision_short}
-  \caption{Le volet ptérioral standard, zone de la voie d'abord}
+  \caption{Représentation collisionnel du stylo}
   \label{fig:ustl}
 \end{figure}
 Modélisation du crâne
@@ -463,14 +469,19 @@ La méthode croisée, ou toed-in
 Les deux caméras sont séparées de quelques centimètres, et les normales des plans de chaque caméra se croisent en un point de l'espace.
 \begin{figure}[!ht]
   \centering
-  \includegraphics[height=8cm]{microscopie-operatoire-microscope-operatoire-neurochirurgie-chirurgie-epine-dorsale-chirurgie-orl-69446-4789125}
-  \caption{Un microscope opératoire. Il dispose de plusieurs filtres lumineux}
+  \includegraphics[height=8cm]{VisionToedIn}
+  \caption{Schéma de configuration croisée.}
   \label{fig:ustl}
 \end{figure}
 
 L'approche parallèle
 Les plans des deux caméras sont parallèles l'un à l'autre.
-
+\begin{figure}[!ht]
+  \centering
+  \includegraphics[height=8cm]{visionParalelle}
+  \caption{Schéma de configuration paralelle.}
+  \label{fig:ustl}
+\end{figure}
 
 
 Une limitation technique vient des lentilles courbes des HMD, cela implique que l'image qui sera diffusée à l'utilisateur comportera des aberrations chromatiques. Ces aberrations sont intimement liées à la forme de la lentille. Plus elle sera courbée, plus les composantes seront soit approchée du centre dans le cas de la composante rouge, soit éloignée du centre dans le cas de la composante bleue. La composante verte de l'image n'étant pas affectée significativement, elle sert donc de référence pour les modifications des deux autres composantes.
@@ -487,7 +498,12 @@ Ce facteur est intimement dépendant des caractéristiques des lentilles disponibl
 \SpecialSection{Bilan}
 
     Le support de l'oculus a été présenté durant le congrès de neurochirurgie. Afin de s'approcher du caractère immobile du binoculaire, un support a été réalisé afin de soutenir le casque.
-
+\begin{figure}[!ht]
+  \centering
+  \includegraphics[height=8cm]{IMG_20150323_162037}
+  \caption{Support pour Oculus.}
+  \label{fig:ustl}
+\end{figure}
 Plusieurs personnes dont des étudiants en médecine et des neurochirurgiens ont testé les simulations avec et sans le casque. 
     Tout d'abord, la plupart des personnes n'ont pas trouvé l'oculus utile. Ils ont reproché de ne pas réussir à localiser les outils contrôlés par rapport au cerveau. Ils avançaient à tâtons  jusqu'à avoir une réponse visuelle ou haptique lorsqu'ils touchaient le cerveau. Cependant, le casque n'est pas en cause ici. Ceci est probablement dû au manque d'ombrage dans la scène. Afin d'améliorer ces points, il est possible d'ajouter des shaders d'ombrage aux objets.
 De plus, les mouvements de caméras étaient gérés par une aide externe, avec la souris. Il est possible d'ajouter à SOFA la gestion des mouvements de la caméra par le casque lui-même.
@@ -505,14 +521,13 @@ L'outil reste à une certaine distance du modèle de collision. SOFA utilise une d
 \SpecialSection{Conclusion}
 
 De plus en plus de simulations fidèles a la réalité voient le jour dans le domaine de la médecine. Ces simulations sont actuellement destinés aux étudiants en formation afin de leur fournir un support pratique et répétable pour leurs exercices du fait de leurs imperfections.
+Et les tests auprès des étudiants ont déjà commencés avec les scènes intracrâniennes 
 
 Mais ces simulations pourront un jour être personnalisés avec les données d'un patient, et le médecin pourra utiliser des outils équivalents à ceux de son bloc pour s'exercer avant une opération importante. 
 
-Et les tests auprès des étudiants ont déjà commencés avec les scènes intracrâniennes 
-
     La simulation dispose actuellement d'un outil controlé par un Phantom. Cet outil peut creuser dans un crane, mais uniquement en surface. Cela laisse une trace qui indique a l'utilisateur le chemin parcouru. De plus, le support des casques est complètement implémenté, et fonctionnel. 
 
-Ce stage a été très enrichissant pour moi car il m'a permis de découvrir les applications de l'imagerie et de la modélisation 3D en médecine. Il m'a permis de participer a ces enjeux au travers de quelques missions auprès des neurochirurgiens ou j'ai découvert une autre façon de penser, ainsi que des besoins nouveaux. De plus, il m'a permis de me familiariser avec la gestion d'un gros projet.  
+Ce stage a été très enrichissant pour moi car il m'a permis de découvrir les applications de l'imagerie et de la modélisation 3D en médecine. Il m'a permis de participer a ces enjeux au travers de quelques missions auprès des neurochirurgiens ou j'ai découvert une autre façon de penser, ainsi que des besoins nouveaux. De plus, il m'a permis de me familiariser avec la gestion d'un projet a plusieurs membres.  
 
 
 

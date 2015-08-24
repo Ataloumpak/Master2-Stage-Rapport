@@ -1,9 +1,9 @@
 \select@language {french}
 \@frame@switchfalse 
-\contentsline {section}{\numberline {1}Resum\'e du stage}{i}{section.1.1}
+\contentsline {section}{\numberline {1}R\'esum\'e du stage}{i}{section.1.1}
 \contentsline {spsection}{Introduction}{1}{division.4}
-\contentsline {spsection}{table des abr\'eviations et des sigles}{2}{division.5}
-\contentsline {spsection}{la table des tableaux et figures}{3}{division.6}
+\contentsline {spsection}{Table des abr\'eviations et des sigles}{2}{division.5}
+\contentsline {spsection}{Table des figures}{3}{division.6}
 \contentsline {spsection}{Description de l'an\'evrisme}{4}{division.7}
 \contentsline {section}{\numberline {1}Soin par cath\'eter}{4}{section.7.1}
 \contentsline {section}{\numberline {2}Soin par chirurgie}{5}{section.7.2}
